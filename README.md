@@ -198,8 +198,8 @@ graph TD
 
 ### 1. Run with Node.js
 ```bash
-git clone https://github.com/Nivedreddy6/linux.git
-cd linux
+git clone https://github.com/Nivedreddy6/cyberbash-os.git
+cd cyberbash-os
 node server.js
 # Access at http://localhost:3000
 ```
