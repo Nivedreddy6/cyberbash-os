@@ -1,11 +1,11 @@
-<p align="center">
-  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer">
+<p align="center" id="top">
+  <a href="#top">
     <img src="assets/banner.jpg" alt="CyberBash OS Banner" width="100%" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer">
+  <a href="#top">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=1000&color=00F0FF&background=0A0C1400&center=true&vCenter=true&multiline=true&width=800&height=90&lines=%E2%9A%A1+CYBERBASH+OS+%3A%3A+RETRO-FUTURISTIC+WEB+LINUX+DESKTOP;%F0%9F%9B%A1%EF%B8%8F+10-LEVEL+HACKER+QUEST+ENGINE+%2B+AUTHENTIC+BASH+SHELL;%F0%9F%8E%A8+6+NEON+THEMES+%7C+SYNTHETIC+AUDIO+%7C+GRAPHICAL+FILE+MANAGER" alt="CyberBash Typing Banner" />
   </a>
 </p>
@@ -20,13 +20,13 @@
 </p>
 
 <p align="center">
-  <a href="https://nivedreddy6.github.io/cyberbash-os/"><img src="https://img.shields.io/badge/🚀_LAUNCH_LIVE_SIMULATION-00f0ff?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Launch Live Simulation" /></a>
+  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/🚀_LAUNCH_LIVE_SIMULATION-00f0ff?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Launch Live Simulation" /></a>
   <a href="#-10-level-hacker-quest-roadmap"><img src="https://img.shields.io/badge/🎯_QUEST_ROADMAP-ff007f?style=for-the-badge&logo=crosshairs&logoColor=white" alt="Quest Manifest" /></a>
   <a href="#-full-command-lab-reference"><img src="https://img.shields.io/badge/📖_COMMAND_LAB-00ff66?style=for-the-badge&logo=gnubash&logoColor=black" alt="Command Lab" /></a>
 </p>
 
 <p align="center">
-  <img src="assets/neon_divider.svg" width="100%" />
+  <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
 > [!TIP]
@@ -42,33 +42,39 @@
 > **CyberBash OS** is a gamified, retro-futuristic **Linux GUI Desktop Environment**, **Interactive Unix Shell**, and **Cyber Security Simulator**. Built with **zero framework overhead** (Vanilla ES6 Modules, Hardware-Accelerated CSS3, Dynamic Canvas Digital Rain, and Web Audio Synthesizers), it runs completely client-side in any modern browser.
 
 <p align="center">
-  <img src="assets/neon_divider.svg" width="100%" />
+  <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
 ## ⚡ Core Feature Matrix
 
 <p align="center">
-  <img src="assets/feature_showcase.svg" alt="CyberBash Feature Matrix" width="100%" />
+  <a href="#top">
+    <img src="assets/feature_showcase.svg" alt="CyberBash Feature Matrix" width="100%" />
+  </a>
 </p>
 
 <p align="center">
-  <img src="assets/neon_divider.svg" width="100%" />
+  <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
 ## 🎨 6 Neon Aesthetic Themes
 
 <p align="center">
-  <img src="assets/themes_banner.svg" alt="CyberBash Themes" width="100%" />
+  <a href="#top">
+    <img src="assets/themes_banner.svg" alt="CyberBash Themes" width="100%" />
+  </a>
 </p>
 
 <p align="center">
-  <img src="assets/neon_divider.svg" width="100%" />
+  <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
 ## 🎯 10-Level Hacker Quest Roadmap
 
 <p align="center">
-  <img src="assets/quest_cards.svg" alt="Hacker Quests Roadmap" width="100%" />
+  <a href="#top">
+    <img src="assets/quest_cards.svg" alt="Hacker Quests Roadmap" width="100%" />
+  </a>
 </p>
 
 > [!NOTE]
@@ -88,7 +94,7 @@
 | `10` | 👑 | **Matrix Awakening** | Benchmark cyber node hardware & enter digital rain | `neofetch && matrix` | **`+1000 XP`** |
 
 <p align="center">
-  <img src="assets/neon_divider.svg" width="100%" />
+  <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
 ## 📖 Full Command Lab Reference
@@ -135,7 +141,7 @@ sl               # Steam Locomotive ASCII train animation
 ```
 
 <p align="center">
-  <img src="assets/neon_divider.svg" width="100%" />
+  <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
 ## 🏗️ Architecture & Data Flow
@@ -179,7 +185,7 @@ graph TD
 ```
 
 <p align="center">
-  <img src="assets/neon_divider.svg" width="100%" />
+  <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
 ## ⌨️ Desktop Keyboard Shortcuts
@@ -195,7 +201,7 @@ graph TD
 | <kbd>Double Click</kbd> | **Maximize / Restore Window** | `Titlebar` |
 
 <p align="center">
-  <img src="assets/neon_divider.svg" width="100%" />
+  <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
 ## 🚀 Quick Run Locally
