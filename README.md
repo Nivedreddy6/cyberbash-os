@@ -194,7 +194,27 @@ node server.js
 ```
 
 <p align="center">
+  <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
+</p>
+
+<br/>
+
+<p align="center">
   <a href="https://github.com/Nivedreddy6" target="_blank" rel="noopener noreferrer">
-    <img src="assets/author_footer.svg" alt="Engineered by Nivedreddy6" width="100%" />
+    <img src="https://github.com/Nivedreddy6.png" width="90" height="90" style="border-radius: 50%;" alt="Nivedreddy6 Profile" />
   </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Nivedreddy6" target="_blank" rel="noopener noreferrer">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=20&duration=2500&pause=1200&color=00F0FF&background=0A0C1400&center=true&vCenter=true&width=650&height=40&lines=%E2%9A%A1+ENGINEERED+WITH+PASSION+BY+NIVEDREDDY6;%F0%9F%9B%A1%EF%B8%8F+CYBERBASH+OS+v2.5+%2F%2F+WEB+LINUX+SIMULATOR" alt="Author Headline" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Nivedreddy6" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/★_VIEW_GITHUB-PROFILE-00f0ff?style=for-the-badge&logo=github&logoColor=black" alt="GitHub Profile" />
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/📜_LICENSE-MIT-00ff66?style=for-the-badge" alt="MIT License" />
 </p>
