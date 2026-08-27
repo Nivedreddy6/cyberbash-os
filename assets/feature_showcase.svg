@@ -1,0 +1,109 @@
+<svg width="100%" height="420" viewBox="0 0 1100 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121526" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0a0c14" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="borderGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#ff007f" />
+    </linearGradient>
+    <linearGradient id="borderGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#9d4edd" />
+    </linearGradient>
+    <linearGradient id="borderGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff66" />
+      <stop offset="100%" stop-color="#00f0ff" />
+    </linearGradient>
+    <linearGradient id="borderGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcee0a" />
+      <stop offset="100%" stop-color="#ff9100" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .card-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; }
+    .card-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; fill: #8a99ad; }
+    .code-text { font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; }
+  </style>
+
+  <!-- CARD 1: Terminal & Pipelines -->
+  <g transform="translate(10, 10)">
+    <rect width="525" height="190" rx="14" fill="url(#cardGrad1)" stroke="url(#borderGrad1)" stroke-width="2" />
+    <circle cx="28" cy="28" r="6" fill="#ff5f56" />
+    <circle cx="46" cy="28" r="6" fill="#ffbd2e" />
+    <circle cx="64" cy="28" r="6" fill="#27c93f" />
+    <text x="82" y="33" fill="#00f0ff" class="card-title">💻 UNIX BASH SHELL &amp; PIPELINES</text>
+    
+    <rect x="20" y="52" width="485" height="120" rx="8" fill="#07090e" stroke="#1f2640" stroke-width="1" />
+    <text x="32" y="78" fill="#00f0ff" class="code-text">guest@cybernode:~$ <tspan fill="#ffffff">cat /var/log/syslog | grep CRITICAL</tspan></text>
+    <text x="32" y="100" fill="#ff007f" class="code-text">[CRITICAL] Rogue daemon on PID 7392 (99% CPU)</text>
+    <text x="32" y="122" fill="#00f0ff" class="code-text">guest@cybernode:~$ <tspan fill="#fcee0a">kill -9 7392</tspan></text>
+    <text x="32" y="144" fill="#00ff66" class="code-text">[+] Process neutralized. +250 XP earned!</text>
+  </g>
+
+  <!-- CARD 2: Nautilus File Explorer -->
+  <g transform="translate(565, 10)">
+    <rect width="525" height="190" rx="14" fill="url(#cardGrad1)" stroke="url(#borderGrad2)" stroke-width="2" />
+    <circle cx="28" cy="28" r="6" fill="#ff5f56" />
+    <circle cx="46" cy="28" r="6" fill="#ffbd2e" />
+    <circle cx="64" cy="28" r="6" fill="#27c93f" />
+    <text x="82" y="33" fill="#ff007f" class="card-title">📁 NAUTILUS GRAPHICAL FILE MANAGER</text>
+    
+    <rect x="20" y="52" width="485" height="120" rx="8" fill="#07090e" stroke="#1f2640" stroke-width="1" />
+    <!-- Folder 1 -->
+    <rect x="35" y="66" width="95" height="92" rx="8" fill="#121526" stroke="#ffb703" stroke-width="1.5" />
+    <text x="70" y="105" font-size="28" text-anchor="middle">📁</text>
+    <text x="82" y="138" fill="#ffb703" class="code-text" text-anchor="middle">projects/</text>
+    
+    <!-- Folder 2 -->
+    <rect x="145" y="66" width="95" height="92" rx="8" fill="#121526" stroke="#ffb703" stroke-width="1.5" />
+    <text x="180" y="105" font-size="28" text-anchor="middle">📁</text>
+    <text x="192" y="138" fill="#ffb703" class="code-text" text-anchor="middle">notes/</text>
+
+    <!-- File 1 -->
+    <rect x="255" y="66" width="110" height="92" rx="8" fill="#121526" stroke="#00f0ff" stroke-width="1.5" />
+    <text x="298" y="105" font-size="28" text-anchor="middle">📄</text>
+    <text x="310" y="138" fill="#00f0ff" class="code-text" text-anchor="middle">welcome.txt</text>
+
+    <!-- File 2 -->
+    <rect x="380" y="66" width="110" height="92" rx="8" fill="#121526" stroke="#ff007f" stroke-width="1.5" />
+    <text x="423" y="105" font-size="28" text-anchor="middle">🔒</text>
+    <text x="435" y="138" fill="#ff007f" class="code-text" text-anchor="middle">.mission_brief</text>
+  </g>
+
+  <!-- CARD 3: Hacker Quest Engine -->
+  <g transform="translate(10, 220)">
+    <rect width="525" height="190" rx="14" fill="url(#cardGrad1)" stroke="url(#borderGrad3)" stroke-width="2" />
+    <circle cx="28" cy="28" r="6" fill="#ff5f56" />
+    <circle cx="46" cy="28" r="6" fill="#ffbd2e" />
+    <circle cx="64" cy="28" r="6" fill="#27c93f" />
+    <text x="82" y="33" fill="#00ff66" class="card-title">🎯 10-LEVEL CYBER HACKER QUEST</text>
+    
+    <rect x="20" y="52" width="485" height="120" rx="8" fill="#07090e" stroke="#1f2640" stroke-width="1" />
+    <text x="32" y="78" fill="#fcee0a" class="code-text">⚔️ OPERATION: LINUX GUARDIAN [ACTIVE]</text>
+    
+    <!-- XP bar -->
+    <rect x="32" y="90" width="460" height="14" rx="7" fill="#1a1e36" />
+    <rect x="32" y="90" width="310" height="14" rx="7" fill="url(#borderGrad3)" />
+    <text x="32" y="130" fill="#e2e8f0" class="code-text">Current Rank: <tspan fill="#00ff66" font-weight="700">CYBER OPERATIVE</tspan> (1,850 XP)</text>
+    <text x="32" y="152" fill="#8a99ad" class="code-text">Objectives: Permissions Hardening, Cron Repair, Forensic Grep</text>
+  </g>
+
+  <!-- CARD 4: Nano Editor & System Monitor -->
+  <g transform="translate(565, 220)">
+    <rect width="525" height="190" rx="14" fill="url(#cardGrad1)" stroke="url(#borderGrad4)" stroke-width="2" />
+    <circle cx="28" cy="28" r="6" fill="#ff5f56" />
+    <circle cx="46" cy="28" r="6" fill="#ffbd2e" />
+    <circle cx="64" cy="28" r="6" fill="#27c93f" />
+    <text x="82" y="33" fill="#fcee0a" class="card-title">📝 NANO TEXT EDITOR &amp; HTOP MONITOR</text>
+    
+    <rect x="20" y="52" width="485" height="120" rx="8" fill="#07090e" stroke="#1f2640" stroke-width="1" />
+    <text x="32" y="78" fill="#fcee0a" class="code-text">GNU nano 7.2         /home/guest/notes/patch.txt</text>
+    <text x="32" y="100" fill="#00f0ff" class="code-text">[+] Hardened port 22 &amp; updated /etc/sudoers</text>
+    <rect x="32" y="112" width="460" height="1" fill="#2a3158" />
+    <text x="32" y="134" fill="#00ff66" class="code-text">CPU: [||||||||||        ] 24% | RAM: 2.34 / 8.0 GB (29%)</text>
+    <text x="32" y="154" fill="#ff007f" class="code-text">Shortcuts: ^O Save  ^X Exit  |  Live Web Audio Feedback</text>
+  </g>
+</svg>

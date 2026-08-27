@@ -21,11 +21,13 @@
 
 <p align="center">
   <a href="https://nivedreddy6.github.io/cyberbash-os/"><img src="https://img.shields.io/badge/🚀_LAUNCH_LIVE_SIMULATION-00f0ff?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Launch Live Simulation" /></a>
-  <a href="#-10-level-hacker-quest-matrix"><img src="https://img.shields.io/badge/🎯_QUEST_MANIFEST-ff007f?style=for-the-badge&logo=crosshairs&logoColor=white" alt="Quest Manifest" /></a>
+  <a href="#-10-level-hacker-quest-roadmap"><img src="https://img.shields.io/badge/🎯_QUEST_ROADMAP-ff007f?style=for-the-badge&logo=crosshairs&logoColor=white" alt="Quest Manifest" /></a>
   <a href="#-full-command-lab-reference"><img src="https://img.shields.io/badge/📖_COMMAND_LAB-00ff66?style=for-the-badge&logo=gnubash&logoColor=black" alt="Command Lab" /></a>
 </p>
 
----
+<p align="center">
+  <img src="assets/neon_divider.svg" width="100%" />
+</p>
 
 > [!TIP]
 > ### ⚡ Live Web Deployment Ready!
@@ -39,50 +41,35 @@
 > [!IMPORTANT]
 > **CyberBash OS** is a gamified, retro-futuristic **Linux GUI Desktop Environment**, **Interactive Unix Shell**, and **Cyber Security Simulator**. Built with **zero framework overhead** (Vanilla ES6 Modules, Hardware-Accelerated CSS3, Dynamic Canvas Digital Rain, and Web Audio Synthesizers), it runs completely client-side in any modern browser.
 
----
+<p align="center">
+  <img src="assets/neon_divider.svg" width="100%" />
+</p>
 
-## ⚡ Core Feature Modules
+## ⚡ Core Feature Matrix
 
-```diff
-+ [MODULE 01] 💻 AUTHENTIC UNIX TERMINAL & PIPELINES
-+ guest@cybernode:~$ cat /var/log/syslog | grep CRITICAL | wc -l
-+ 4
-+ guest@cybernode:~$ ps aux | grep cryptominer
-! 7392  guest  99.4% CPU  03:14  ./cryptominer --gpu-mine
-- guest@cybernode:~$ kill -9 7392
-+ [SUCCESS] SIGKILL sent to PID 7392. Threat neutralized! (+250 XP)
-```
+<p align="center">
+  <img src="assets/feature_showcase.svg" alt="CyberBash Feature Matrix" width="100%" />
+</p>
 
-```diff
-+ [MODULE 02] 📁 NAUTILUS DUAL-PANE FILE MANAGER
-+ [PLACES]  /home/guest  |  /home/guest/notes  |  /home/guest/projects
-+ [SYSTEM]  / (root)     |  /bin               |  /etc  |  /var/log
-! [FEATURES] Single/Double Click Navigation, Breadcrumbs Trail, Nano Integration
-+ [STORAGE] Persistent browser LocalStorage VFS layer
-```
+<p align="center">
+  <img src="assets/neon_divider.svg" width="100%" />
+</p>
 
-```diff
-+ [MODULE 03] 📝 GNU NANO 7.2 IN-TERMINAL TEXT EDITOR
-! GNU nano 7.2               /home/guest/notes/security_patch.txt
-+ [SECURITY_PATCH_APPLIED]
-+ - iptables -A INPUT -p tcp --dport 7392 -j DROP
-+ - chmod 700 /home/guest/.bashrc
-! ^G Get Help    ^O WriteOut (Save)    ^R Read File    ^X Exit Nano
-```
+## 🎨 6 Neon Aesthetic Themes
 
-```diff
-+ [MODULE 04] 🎨 6 DYNAMIC NEON THEMES & AUDIO SYNTH
-+ [1] Cyberpunk Neon  : Cyan (#00f0ff) & Hot Pink (#ff007f)
-+ [2] Matrix Green    : Phosphor Terminal Green (#00ff66) & Canvas Rain
-+ [3] Dracula Dark    : Vampire Purple (#bd93f9) & Coral (#ff79c6)
-+ [4] Nord Frost      : Arctic Blue (#88c0d0) & Snow Storm (#eceff4)
-+ [5] Retro Amber     : Phosphor CRT Glow (#ffaa00)
-+ [6] Ubuntu Jammy    : Canonical Aubergine (#77216f) & Orange (#e95420)
-```
+<p align="center">
+  <img src="assets/themes_banner.svg" alt="CyberBash Themes" width="100%" />
+</p>
 
----
+<p align="center">
+  <img src="assets/neon_divider.svg" width="100%" />
+</p>
 
-## 🎯 10-Level Hacker Quest Matrix
+## 🎯 10-Level Hacker Quest Roadmap
+
+<p align="center">
+  <img src="assets/quest_cards.svg" alt="Hacker Quests Roadmap" width="100%" />
+</p>
 
 > [!NOTE]
 > ### 🛡️ Operation: Linux Guardian — Mission Manifest
@@ -100,7 +87,9 @@
 | `09` | 🔴 | **Root Escalation** | Elevate session permissions to root administrative mode | `sudo su` | **`+500 XP`** |
 | `10` | 👑 | **Matrix Awakening** | Benchmark cyber node hardware & enter digital rain | `neofetch && matrix` | **`+1000 XP`** |
 
----
+<p align="center">
+  <img src="assets/neon_divider.svg" width="100%" />
+</p>
 
 ## 📖 Full Command Lab Reference
 
@@ -145,7 +134,9 @@ cowsay <msg>     # Configurable talking cyber ASCII cow
 sl               # Steam Locomotive ASCII train animation
 ```
 
----
+<p align="center">
+  <img src="assets/neon_divider.svg" width="100%" />
+</p>
 
 ## 🏗️ Architecture & Data Flow
 
@@ -187,7 +178,9 @@ graph TD
     VFS -->|Auto-Sanitize & Sync| LocalStorage[("💽 Browser LocalStorage")]:::vfs
 ```
 
----
+<p align="center">
+  <img src="assets/neon_divider.svg" width="100%" />
+</p>
 
 ## ⌨️ Desktop Keyboard Shortcuts
 
@@ -201,7 +194,9 @@ graph TD
 | <kbd>Ctrl</kbd> + <kbd>X</kbd> | **Exit Editor** | `Nano Editor` |
 | <kbd>Double Click</kbd> | **Maximize / Restore Window** | `Titlebar` |
 
----
+<p align="center">
+  <img src="assets/neon_divider.svg" width="100%" />
+</p>
 
 ## 🚀 Quick Run Locally
 

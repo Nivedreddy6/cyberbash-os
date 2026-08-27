@@ -1,0 +1,99 @@
+<svg width="100%" height="280" viewBox="0 0 1100 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="qbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121526" />
+      <stop offset="100%" stop-color="#0a0c14" />
+    </linearGradient>
+  </defs>
+  <style>
+    .q-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 700; }
+    .q-cmd { font-family: 'Fira Code', monospace; font-size: 11px; fill: #00f0ff; }
+    .q-xp { font-family: 'Fira Code', monospace; font-size: 11px; font-weight: 700; fill: #fcee0a; text-anchor: end; }
+  </style>
+
+  <!-- Row 1 (Levels 1 to 5) -->
+  <g transform="translate(10, 10)">
+    <!-- L1 -->
+    <rect x="0" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#00f0ff" stroke-width="1.5" />
+    <text x="12" y="26" fill="#00f0ff" class="q-title">LVL 01: RECON</text>
+    <text x="195" y="26" class="q-xp">+100 XP</text>
+    <text x="12" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Coordinates &amp; Dotfiles</text>
+    <rect x="10" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="18" y="92" class="q-cmd">pwd &amp;&amp; ls -la</text>
+
+    <!-- L2 -->
+    <rect x="220" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#ff007f" stroke-width="1.5" />
+    <text x="232" y="26" fill="#ff007f" class="q-title">LVL 02: BRIEFS</text>
+    <text x="415" y="26" class="q-xp">+150 XP</text>
+    <text x="232" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Decipher Secret Briefs</text>
+    <rect x="230" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="238" y="92" class="q-cmd">cat .mission_brief</text>
+
+    <!-- L3 -->
+    <rect x="440" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#ff3366" stroke-width="1.5" />
+    <text x="452" y="26" fill="#ff3366" class="q-title">LVL 03: FORENSIC</text>
+    <text x="635" y="26" class="q-xp">+200 XP</text>
+    <text x="452" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Audit /var/log/syslog</text>
+    <rect x="450" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="458" y="92" class="q-cmd">grep CRITICAL syslog</text>
+
+    <!-- L4 -->
+    <rect x="660" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#ff9100" stroke-width="1.5" />
+    <text x="672" y="26" fill="#ff9100" class="q-title">LVL 04: KILL DAEMON</text>
+    <text x="855" y="26" class="q-xp">+250 XP</text>
+    <text x="672" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Kill Rogue Miner PID</text>
+    <rect x="670" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="678" y="92" class="q-cmd">kill -9 7392</text>
+
+    <!-- L5 -->
+    <rect x="880" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#00ff66" stroke-width="1.5" />
+    <text x="892" y="26" fill="#00ff66" class="q-title">LVL 05: PATCHING</text>
+    <text x="1075" y="26" class="q-xp">+300 XP</text>
+    <text x="892" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Craft Nano Security Fix</text>
+    <rect x="890" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="898" y="92" class="q-cmd">nano notes/patch.txt</text>
+  </g>
+
+  <!-- Row 2 (Levels 6 to 10) -->
+  <g transform="translate(10, 145)">
+    <!-- L6 -->
+    <rect x="0" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="12" y="26" fill="#38bdf8" class="q-title">LVL 06: ARCHITECT</text>
+    <text x="195" y="26" class="q-xp">+350 XP</text>
+    <text x="12" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Build Folders &amp; Tree</text>
+    <rect x="10" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="18" y="92" class="q-cmd">mkdir -p &amp;&amp; tree</text>
+
+    <!-- L7 -->
+    <rect x="220" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#c084fc" stroke-width="1.5" />
+    <text x="232" y="26" fill="#c084fc" class="q-title">LVL 07: HARDEN</text>
+    <text x="415" y="26" class="q-xp">+400 XP</text>
+    <text x="232" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Lockdown Permissions</text>
+    <rect x="230" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="238" y="92" class="q-cmd">chmod 700 .bashrc</text>
+
+    <!-- L8 -->
+    <rect x="440" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#34d399" stroke-width="1.5" />
+    <text x="452" y="26" fill="#34d399" class="q-title">LVL 08: PIPELINES</text>
+    <text x="635" y="26" class="q-xp">+450 XP</text>
+    <text x="452" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Stream Passwd Counter</text>
+    <rect x="450" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="458" y="92" class="q-cmd">cat /etc/passwd | wc</text>
+
+    <!-- L9 -->
+    <rect x="660" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#f43f5e" stroke-width="1.5" />
+    <text x="672" y="26" fill="#f43f5e" class="q-title">LVL 09: ESCALATION</text>
+    <text x="855" y="26" class="q-xp">+500 XP</text>
+    <text x="672" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Root Privileges Escalation</text>
+    <rect x="670" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="678" y="92" class="q-cmd">sudo su</text>
+
+    <!-- L10 -->
+    <rect x="880" y="0" width="205" height="120" rx="10" fill="url(#qbg)" stroke="#fcee0a" stroke-width="2" />
+    <text x="892" y="26" fill="#fcee0a" class="q-title">LVL 10: MATRIX 👑</text>
+    <text x="1075" y="26" class="q-xp">+1000 XP</text>
+    <text x="892" y="52" fill="#8a99ad" font-size="11" font-family="sans-serif">Neofetch &amp; Rain Awakening</text>
+    <rect x="890" y="68" width="185" height="38" rx="6" fill="#05070c" />
+    <text x="898" y="92" class="q-cmd">neofetch &amp;&amp; matrix</text>
+  </g>
+</svg>

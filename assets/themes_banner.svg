@@ -1,0 +1,57 @@
+<svg width="100%" height="110" viewBox="0 0 1100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="themeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121526" />
+      <stop offset="100%" stop-color="#0a0c14" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .t-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 700; text-anchor: middle; }
+    .t-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; fill: #8a99ad; text-anchor: middle; }
+  </style>
+
+  <rect width="1100" height="110" rx="14" fill="url(#themeBg)" stroke="#2a3158" stroke-width="1.5" />
+
+  <!-- Theme 1: Cyberpunk -->
+  <g transform="translate(40, 18)">
+    <circle cx="65" cy="24" r="16" fill="#00f0ff" stroke="#ff007f" stroke-width="3" />
+    <text x="65" y="58" fill="#00f0ff" class="t-label">CYBERPUNK</text>
+    <text x="65" y="74" class="t-sub">Neon Cyan / Pink</text>
+  </g>
+
+  <!-- Theme 2: Matrix -->
+  <g transform="translate(220, 18)">
+    <circle cx="65" cy="24" r="16" fill="#00ff66" stroke="#031407" stroke-width="3" />
+    <text x="65" y="58" fill="#00ff66" class="t-label">MATRIX</text>
+    <text x="65" y="74" class="t-sub">Digital Rain Green</text>
+  </g>
+
+  <!-- Theme 3: Dracula -->
+  <g transform="translate(400, 18)">
+    <circle cx="65" cy="24" r="16" fill="#bd93f9" stroke="#ff79c6" stroke-width="3" />
+    <text x="65" y="58" fill="#bd93f9" class="t-label">DRACULA</text>
+    <text x="65" y="74" class="t-sub">Vampire Purple</text>
+  </g>
+
+  <!-- Theme 4: Nord Frost -->
+  <g transform="translate(580, 18)">
+    <circle cx="65" cy="24" r="16" fill="#88c0d0" stroke="#81a1c1" stroke-width="3" />
+    <text x="65" y="58" fill="#88c0d0" class="t-label">NORD FROST</text>
+    <text x="65" y="74" class="t-sub">Arctic Ice Blue</text>
+  </g>
+
+  <!-- Theme 5: Retro Amber -->
+  <g transform="translate(760, 18)">
+    <circle cx="65" cy="24" r="16" fill="#ffaa00" stroke="#ff5500" stroke-width="3" />
+    <text x="65" y="58" fill="#ffaa00" class="t-label">RETRO AMBER</text>
+    <text x="65" y="74" class="t-sub">Vintage CRT Glow</text>
+  </g>
+
+  <!-- Theme 6: Ubuntu Classic -->
+  <g transform="translate(940, 18)">
+    <circle cx="65" cy="24" r="16" fill="#e95420" stroke="#77216f" stroke-width="3" />
+    <text x="65" y="58" fill="#e95420" class="t-label">UBUNTU</text>
+    <text x="65" y="74" class="t-sub">Jammy Aubergine</text>
+  </g>
+</svg>
