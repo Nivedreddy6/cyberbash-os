@@ -231,9 +231,14 @@ export class CheatsheetModal {
       const runBtn = card.querySelector('.cmd-run-btn');
       runBtn.addEventListener('click', () => {
         sound.playKeyClick();
+        if (window.cyberbash?.wm) {
+          window.cyberbash.wm.open('terminal');
+        }
         this.close();
-        this.terminal.input.value = item.example;
-        this.terminal.handleCommand(item.example);
+        if (this.terminal) {
+          this.terminal.input.value = item.example;
+          this.terminal.handleCommand(item.example);
+        }
       });
 
       this.grid.appendChild(card);

@@ -4,7 +4,7 @@
 
 import { defaultFileSystemData } from './defaultFS.js';
 
-const STORAGE_KEY = 'cyberbash_vfs_data_v1';
+const STORAGE_KEY = 'cyberbash_vfs_data_v3';
 
 export class VirtualFileSystem {
   constructor() {
@@ -14,15 +14,42 @@ export class VirtualFileSystem {
     this.init();
   }
 
+  normalizeNodeTypes(node) {
+    if (!node || typeof node !== 'object') return;
+    if (node.type === 'directory') node.type = 'dir';
+    if (node.type === 'dir') {
+      if (!node.children || typeof node.children !== 'object') {
+        node.children = {};
+      }
+      Object.values(node.children).forEach(child => this.normalizeNodeTypes(child));
+    }
+  }
+
   init() {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      try {
-        this.root = JSON.parse(saved);
-      } catch (e) {
+    try {
+      // Clear older legacy keys
+      if (typeof localStorage !== 'undefined') {
+        localStorage.removeItem('cyberbash_vfs_data_v1');
+        localStorage.removeItem('cyberbash_vfs_data_v2');
+      }
+
+      const saved = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
+      if (saved) {
+        try {
+          this.root = JSON.parse(saved);
+          this.normalizeNodeTypes(this.root);
+        } catch (e) {
+          this.root = JSON.parse(JSON.stringify(defaultFileSystemData));
+        }
+      } else {
         this.root = JSON.parse(JSON.stringify(defaultFileSystemData));
       }
-    } else {
+
+      // Verify essential system directories exist
+      if (!this.getNode('/home/guest') || !this.getNode('/bin') || !this.getNode('/etc')) {
+        this.root = JSON.parse(JSON.stringify(defaultFileSystemData));
+      }
+    } catch (e) {
       this.root = JSON.parse(JSON.stringify(defaultFileSystemData));
     }
   }
@@ -51,15 +78,15 @@ export class VirtualFileSystem {
     this.listeners.forEach(fn => fn(this));
   }
 
-  normalizePath(pathStr) {
-    if (!pathStr) return this.cwd;
+  resolvePath(pathStr, baseDir = this.cwd) {
+    if (!pathStr) return baseDir;
     
     // Replace ~ with /home/guest
     let p = pathStr.trim();
     if (p.startsWith('~')) {
       p = '/home/guest' + p.slice(1);
     } else if (!p.startsWith('/')) {
-      p = this.cwd === '/' ? `/${p}` : `${this.cwd}/${p}`;
+      p = baseDir === '/' ? `/${p}` : `${baseDir}/${p}`;
     }
 
     const segments = p.split('/').filter(Boolean);
@@ -75,6 +102,10 @@ export class VirtualFileSystem {
     }
 
     return '/' + resolved.join('/');
+  }
+
+  normalizePath(pathStr) {
+    return this.resolvePath(pathStr, this.cwd);
   }
 
   getNode(pathStr) {

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CyberBash / LinuxVerse - An interactive retro-futuristic Linux CLI simulator, hacker quest game, and visual command mastery OS.">
-  <meta name="keywords" content="linux, bash, terminal, simulator, cli, cyber, gamified, hacker, sysadmin, education">
+  <meta name="description" content="CyberBash OS - An interactive web Linux Desktop GUI, terminal simulator, and hacker quest environment.">
+  <meta name="keywords" content="linux, bash, terminal, web desktop, gui, ubuntu, kali, hacker, quest, cli">
   <meta name="author" content="Nivedreddy6">
-  <title>CyberBash // Linux CLI & Hacker Quest OS</title>
+  <title>CyberBash OS // Web Linux Desktop & Hacker Terminal</title>
   
   <!-- Modern Monospace & UI Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,7 @@
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/desktop.css">
   <link rel="stylesheet" href="styles/terminal.css">
   <link rel="stylesheet" href="styles/explorer.css">
   <link rel="stylesheet" href="styles/quests.css">
@@ -28,59 +29,47 @@
   <canvas id="matrixCanvas" class="effects-canvas"></canvas>
   <div id="crtOverlay" class="crt-scanlines"></div>
 
-  <!-- App Wrapper -->
-  <div id="app" class="app-container">
+  <!-- Desktop Environment Root -->
+  <div id="desktopEnvironment" class="desktop-environment wallpaper-ubuntu">
     
-    <!-- Top System Header Bar -->
-    <header class="sys-header">
-      <div class="sys-brand">
-        <div class="brand-badge">
-          <i class="fa-brands fa-linux brand-icon"></i>
-        </div>
-        <div class="brand-info">
-          <span class="brand-title">CYBER<span class="highlight">BASH</span></span>
-          <span class="brand-version">v2.5.0-LTS [x86_64-virt-unix]</span>
-        </div>
+    <!-- Top System Panel (Ubuntu / Kali Style) -->
+    <header class="desktop-topbar">
+      <!-- Left: App Launcher & Active Window -->
+      <div class="topbar-left">
+        <button id="btnTopLauncher" class="topbar-btn" title="Applications Menu">
+          <i class="fa-brands fa-linux" style="font-size: 16px; color: var(--accent-cyan);"></i>
+          <span style="font-weight: 700; letter-spacing: 0.5px;">Applications</span>
+        </button>
+        <span class="topbar-app-name" id="topbarActiveAppName">
+          <i class="fa-solid fa-terminal"></i> Terminal
+        </span>
+        <button id="topQuickTerm" class="topbar-btn" title="Open Terminal"><i class="fa-solid fa-terminal"></i></button>
+        <button id="topQuickFiles" class="topbar-btn" title="Open File Manager"><i class="fa-solid fa-folder-open"></i></button>
+        <button id="topQuickQuests" class="topbar-btn" title="Open Missions"><i class="fa-solid fa-crosshairs"></i> Missions <span class="badge-count" id="questCountBadge">1/10</span></button>
+        <button id="topQuickCheatsheet" class="topbar-btn" title="Open Cheatsheet"><i class="fa-solid fa-book-bookmark"></i> Cheatsheet</button>
       </div>
 
-      <!-- Quick Status & Breadcrumb -->
-      <div class="sys-status">
-        <div class="status-pill status-user">
-          <i class="fa-solid fa-user-astronaut"></i>
-          <span id="currentUserName">guest</span><span class="at-sign">@</span><span class="host-name">cybernode</span>
-        </div>
-        <div class="status-pill status-path">
-          <i class="fa-solid fa-folder-open"></i>
-          <span id="currentCwdDisplay">/home/guest</span>
-        </div>
-        <div class="status-pill status-xp" id="xpPill" title="Experience Points">
-          <i class="fa-solid fa-bolt"></i>
+      <!-- Center: Date & Time -->
+      <div class="topbar-center">
+        <div class="topbar-clock" id="desktopClock">00:00:00 UTC</div>
+      </div>
+
+      <!-- Right: System Status & User XP -->
+      <div class="topbar-right">
+        <div class="topbar-indicator" id="topbarCpuIndicator"><i class="fa-solid fa-microchip"></i> CPU: 18%</div>
+        <div class="topbar-indicator user-xp-badge" id="xpPill" title="Experience Points">
+          <i class="fa-solid fa-bolt" style="color: var(--accent-yellow);"></i>
           <span id="playerXpDisplay">0 XP</span>
           <span class="rank-tag" id="playerRankDisplay">Recruit</span>
         </div>
-      </div>
-
-      <!-- Header Action Controls -->
-      <div class="sys-actions">
-        <button id="toggleQuestsBtn" class="btn-action pulse-btn" title="Toggle Hacker Quests">
-          <i class="fa-solid fa-crosshairs"></i>
-          <span class="btn-text">Missions</span>
-          <span class="badge-count" id="questCountBadge">1/10</span>
-        </button>
-
-        <button id="toggleExplorerBtn" class="btn-action" title="Toggle Dual-Pane File Explorer">
-          <i class="fa-solid fa-sitemap"></i>
-          <span class="btn-text">VFS Tree</span>
-        </button>
-
-        <button id="openCheatsheetBtn" class="btn-action" title="Linux Command Cheatsheet & Builder">
-          <i class="fa-solid fa-book-bookmark"></i>
-          <span class="btn-text">Cheatsheet</span>
-        </button>
-
-        <!-- Theme Selector Dropdown -->
+        <div class="topbar-indicator">
+          <i class="fa-solid fa-user-astronaut"></i>
+          <span id="currentUserName">guest</span><span class="at-sign">@</span><span class="host-name">cybernode</span>
+        </div>
+        
+        <!-- Theme dropdown -->
         <div class="theme-dropdown-container">
-          <button id="themeSelectBtn" class="btn-action" title="Change Terminal Theme">
+          <button id="themeSelectBtn" class="topbar-btn" title="Switch Theme">
             <i class="fa-solid fa-palette"></i>
           </button>
           <div id="themeMenu" class="theme-menu hidden">
@@ -93,234 +82,537 @@
           </div>
         </div>
 
-        <!-- Audio Toggle -->
-        <button id="soundToggleBtn" class="btn-action" title="Toggle Sound Effects">
+        <button id="soundToggleBtn" class="topbar-btn" title="Toggle Sound">
           <i class="fa-solid fa-volume-high" id="soundIcon"></i>
         </button>
 
-        <!-- CRT Effects Toggle -->
-        <button id="crtToggleBtn" class="btn-action active" title="Toggle CRT Scanline Effect">
+        <button id="crtToggleBtn" class="topbar-btn" title="Toggle CRT Filter">
           <i class="fa-solid fa-tv"></i>
         </button>
 
-        <!-- Quick Help & Reset -->
-        <button id="quickHelpBtn" class="btn-action" title="Help">
-          <i class="fa-solid fa-circle-question"></i>
+        <button id="topQuickSettings" class="topbar-btn" title="Settings">
+          <i class="fa-solid fa-gear"></i>
         </button>
       </div>
     </header>
 
-    <!-- Main Workspace Area (Split Dual-Pane) -->
-    <main class="workspace-layout">
+    <!-- Main Workspace with Dock and Windows -->
+    <main class="desktop-workspace">
       
-      <!-- Terminal Pane (Left / Primary) -->
-      <section class="pane-terminal" id="paneTerminal">
-        <div class="terminal-window">
-          
-          <!-- Terminal Title Bar -->
-          <div class="term-titlebar">
+      <!-- Ubuntu / Kali Left Dock -->
+      <nav class="desktop-dock" id="desktopDock">
+        <button class="dock-item" data-app="launcher" title="Applications">
+          <i class="fa-solid fa-grip" style="color: var(--accent-cyan);"></i>
+          <span class="dock-tooltip">Applications</span>
+        </button>
+
+        <div class="dock-separator"></div>
+
+        <button class="dock-item running focused" data-app="terminal" title="Terminal (Bash)">
+          <i class="fa-solid fa-terminal" style="color: var(--accent-cyan);"></i>
+          <span class="dock-tooltip">Terminal</span>
+        </button>
+
+        <button class="dock-item" data-app="files" title="Files (Nautilus)">
+          <i class="fa-solid fa-folder-open" style="color: #ffb703;"></i>
+          <span class="dock-tooltip">File Manager</span>
+        </button>
+
+        <button class="dock-item" data-app="quests" title="Cyber Hacker Missions">
+          <i class="fa-solid fa-crosshairs" style="color: var(--accent-pink);"></i>
+          <span class="dock-tooltip">Hacker Missions</span>
+        </button>
+
+        <button class="dock-item" data-app="cheatsheet" title="Command Lab & Cheatsheet">
+          <i class="fa-solid fa-book-bookmark" style="color: #8ecae6;"></i>
+          <span class="dock-tooltip">Command Cheatsheet</span>
+        </button>
+
+        <button class="dock-item" data-app="sysmon" title="System Monitor (htop)">
+          <i class="fa-solid fa-chart-line" style="color: var(--accent-green);"></i>
+          <span class="dock-tooltip">System Monitor</span>
+        </button>
+
+        <div class="dock-separator"></div>
+
+        <button class="dock-item" data-app="settings" title="Settings & Customization">
+          <i class="fa-solid fa-gear" style="color: #cbd5e1;"></i>
+          <span class="dock-tooltip">Settings</span>
+        </button>
+      </nav>
+
+      <!-- Desktop Icons Area -->
+      <div class="desktop-icons-area" id="desktopIconsArea">
+        <div class="desktop-shortcut" data-app="terminal">
+          <div class="shortcut-icon icon-term"><i class="fa-solid fa-terminal"></i></div>
+          <span class="shortcut-label">Terminal</span>
+        </div>
+
+        <div class="desktop-shortcut" data-app="files">
+          <div class="shortcut-icon icon-files"><i class="fa-solid fa-folder"></i></div>
+          <span class="shortcut-label">Files</span>
+        </div>
+
+        <div class="desktop-shortcut" data-app="quests">
+          <div class="shortcut-icon icon-quest"><i class="fa-solid fa-shield-halved"></i></div>
+          <span class="shortcut-label">Missions</span>
+        </div>
+
+        <div class="desktop-shortcut" data-app="cheatsheet">
+          <div class="shortcut-icon icon-cheat"><i class="fa-solid fa-book-bookmark"></i></div>
+          <span class="shortcut-label">Cheatsheet</span>
+        </div>
+
+        <div class="desktop-shortcut" data-app="sysmon">
+          <div class="shortcut-icon icon-monitor"><i class="fa-solid fa-microchip"></i></div>
+          <span class="shortcut-label">SysMonitor</span>
+        </div>
+
+        <div class="desktop-shortcut" data-app="notes">
+          <div class="shortcut-icon icon-nano"><i class="fa-solid fa-file-lines"></i></div>
+          <span class="shortcut-label">welcome.txt</span>
+        </div>
+
+        <div class="desktop-shortcut" data-app="settings">
+          <div class="shortcut-icon icon-settings"><i class="fa-solid fa-sliders"></i></div>
+          <span class="shortcut-label">Settings</span>
+        </div>
+      </div>
+
+      <!-- Multi-Window Desktop Container -->
+      <div class="windows-container" id="windowsContainer">
+        
+        <!-- WINDOW 1: TERMINAL APP -->
+        <section class="os-window is-focused" id="winTerminal">
+          <div class="window-titlebar">
             <div class="window-controls">
-              <span class="ctrl-dot dot-close" title="Clear Terminal (clear)"></span>
-              <span class="ctrl-dot dot-min" title="Minimize"></span>
-              <span class="ctrl-dot dot-max" title="Fullscreen"></span>
+              <button class="ctrl-btn btn-close" title="Close Window"></button>
+              <button class="ctrl-btn btn-min" title="Minimize to Dock"></button>
+              <button class="ctrl-btn btn-max" title="Maximize / Restore"></button>
             </div>
-            <div class="term-title-text">
-              <i class="fa-solid fa-terminal"></i> bash - 80x24 - guest@cybernode:~
+            <div class="window-title-group">
+              <i class="fa-solid fa-terminal"></i>
+              <span>bash - 80x24 - guest@cybernode:~</span>
             </div>
-            <div class="term-quick-stats">
-              <span id="clockDisplay">00:00:00 UTC</span>
+            <div class="window-extra-actions">
+              <button class="win-action-btn" id="termClearBtn" title="Clear (Ctrl+L)"><i class="fa-solid fa-broom"></i></button>
             </div>
           </div>
 
-          <!-- Terminal Output Scroll Container -->
-          <div class="term-screen" id="termScreen" tabindex="0">
-            <div id="termOutput" class="term-output">
-              <!-- Rendered lines will appear here dynamically -->
-            </div>
+          <div class="window-body">
+            <div class="terminal-window">
+              <div class="term-screen" id="termScreen" tabindex="0">
+                <div id="termOutput" class="term-output"></div>
 
-            <!-- Active Input Line -->
-            <div class="term-input-row" id="termInputRow">
-              <span class="term-prompt" id="termPrompt">
-                <span class="prompt-user">guest</span><span class="prompt-at">@</span><span class="prompt-host">cybernode</span>:<span class="prompt-path">~</span><span class="prompt-char">$</span>
-              </span>
-              <div class="input-wrapper">
-                <input type="text" id="termInput" class="term-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus />
-                <span class="custom-cursor" id="customCursor"></span>
-              </div>
-            </div>
-
-            <!-- Nano / Text Editor Overlay Container -->
-            <div id="nanoEditorContainer" class="nano-editor hidden">
-              <div class="nano-header">
-                <span class="nano-title">GNU nano 7.2</span>
-                <span id="nanoFilename" class="nano-filename">/home/guest/notes.txt</span>
-                <span id="nanoModified" class="nano-modified"></span>
-              </div>
-              <textarea id="nanoTextarea" class="nano-content" spellcheck="false"></textarea>
-              <div class="nano-footer">
-                <div class="nano-keymap">
-                  <span class="k-combo"><span class="k-mod">^G</span> Get Help</span>
-                  <span class="k-combo"><span class="k-mod">^O</span> WriteOut</span>
-                  <span class="k-combo"><span class="k-mod">^R</span> Read File</span>
-                  <span class="k-combo"><span class="k-mod">^W</span> Where Is</span>
-                  <span class="k-combo"><span class="k-mod">^K</span> Cut Text</span>
-                  <span class="k-combo"><span class="k-mod">^X</span> Exit</span>
+                <!-- Active Input Line -->
+                <div class="term-input-row" id="termInputRow">
+                  <span class="term-prompt" id="termPrompt">
+                    <span class="prompt-user">guest</span><span class="prompt-at">@</span><span class="prompt-host">cybernode</span>:<span class="prompt-path">~</span><span class="prompt-char">$</span>
+                  </span>
+                  <div class="input-wrapper">
+                    <input type="text" id="termInput" class="term-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus />
+                    <span class="custom-cursor" id="customCursor"></span>
+                  </div>
                 </div>
-                <div id="nanoStatusMsg" class="nano-status">Type text. Ctrl+O to save, Ctrl+X to exit.</div>
+
+                <!-- Nano Text Editor Overlay -->
+                <div id="nanoEditorContainer" class="nano-editor hidden">
+                  <div class="nano-header">
+                    <span class="nano-title">GNU nano 7.2</span>
+                    <span id="nanoFilename" class="nano-filename">/home/guest/notes.txt</span>
+                    <span id="nanoModified" class="nano-modified"></span>
+                  </div>
+                  <textarea id="nanoTextarea" class="nano-content" spellcheck="false"></textarea>
+                  <div class="nano-footer">
+                    <div class="nano-keymap">
+                      <span class="k-combo"><span class="k-mod">^G</span> Help</span>
+                      <span class="k-combo"><span class="k-mod">^O</span> Save</span>
+                      <span class="k-combo"><span class="k-mod">^R</span> Read</span>
+                      <span class="k-combo"><span class="k-mod">^K</span> Cut</span>
+                      <span class="k-combo"><span class="k-mod">^X</span> Exit</span>
+                    </div>
+                    <div id="nanoStatusMsg" class="nano-status">Type text. Ctrl+O to save, Ctrl+X to exit.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Command Helpers Bar -->
+              <div class="quick-keys-bar" id="quickKeysBar">
+                <button class="k-btn" data-key="Tab">Tab (AutoComplete)</button>
+                <button class="k-btn" data-key="ArrowUp"><i class="fa-solid fa-arrow-up"></i> Prev Cmd</button>
+                <button class="k-btn" data-key="ArrowDown"><i class="fa-solid fa-arrow-down"></i> Next Cmd</button>
+                <button class="k-btn" data-cmd="ls -la">ls -la</button>
+                <button class="k-btn" data-cmd="pwd">pwd</button>
+                <button class="k-btn" data-cmd="neofetch">neofetch</button>
+                <button class="k-btn" data-cmd="help">help</button>
+                <button class="k-btn" data-cmd="clear">clear</button>
+                <button class="k-btn" data-key="CtrlC">Ctrl+C</button>
               </div>
             </div>
           </div>
+        </section>
 
-          <!-- Mobile & Quick Shell Helper Keybar -->
-          <div class="quick-keys-bar" id="quickKeysBar">
-            <button class="k-btn" data-key="Tab">Tab (AutoComplete)</button>
-            <button class="k-btn" data-key="ArrowUp"><i class="fa-solid fa-arrow-up"></i> Prev Cmd</button>
-            <button class="k-btn" data-key="ArrowDown"><i class="fa-solid fa-arrow-down"></i> Next Cmd</button>
-            <button class="k-btn" data-cmd="ls -la">ls -la</button>
-            <button class="k-btn" data-cmd="pwd">pwd</button>
-            <button class="k-btn" data-cmd="tree">tree</button>
-            <button class="k-btn" data-cmd="help">help</button>
-            <button class="k-btn" data-cmd="clear">clear</button>
-            <button class="k-btn" data-key="CtrlC">Ctrl+C</button>
+        <!-- WINDOW 2: FILES (NAUTILUS) APP -->
+        <section class="os-window hidden" id="winFiles">
+          <div class="window-titlebar">
+            <div class="window-controls">
+              <button class="ctrl-btn btn-close" title="Close"></button>
+              <button class="ctrl-btn btn-min" title="Minimize"></button>
+              <button class="ctrl-btn btn-max" title="Maximize"></button>
+            </div>
+            <div class="window-title-group">
+              <i class="fa-solid fa-folder-open" style="color: #ffb703;"></i>
+              <span>Files - Virtual File Explorer</span>
+            </div>
+            <div class="window-extra-actions">
+              <button class="win-action-btn" id="nautilusBtnNewFolder" title="New Folder"><i class="fa-solid fa-folder-plus"></i></button>
+              <button class="win-action-btn" id="nautilusBtnNewFile" title="New File"><i class="fa-solid fa-file-circle-plus"></i></button>
+            </div>
           </div>
 
+          <div class="window-body">
+            <div class="nautilus-app" id="fileManagerApp">
+              <!-- Toolbar -->
+              <div class="nautilus-toolbar">
+                <div class="toolbar-nav-group">
+                  <button class="nautilus-btn" id="nautilusBtnBack" title="Back"><i class="fa-solid fa-arrow-left"></i></button>
+                  <button class="nautilus-btn" id="nautilusBtnForward" title="Forward"><i class="fa-solid fa-arrow-right"></i></button>
+                  <button class="nautilus-btn" id="nautilusBtnUp" title="Parent Directory"><i class="fa-solid fa-arrow-up"></i></button>
+                  <button class="nautilus-btn" id="nautilusBtnRefresh" title="Refresh"><i class="fa-solid fa-rotate"></i></button>
+                </div>
+
+                <div class="nautilus-breadcrumbs">
+                  <!-- Generated dynamically -->
+                </div>
+              </div>
+
+              <!-- Main Split Area -->
+              <div class="nautilus-main">
+                <!-- Sidebar Quick Locations -->
+                <aside class="nautilus-sidebar">
+                  <div class="sidebar-category-title">Places</div>
+                  <div class="sidebar-link active" data-path="/home/guest"><i class="fa-solid fa-house"></i> Home</div>
+                  <div class="sidebar-link" data-path="/home/guest/notes"><i class="fa-solid fa-folder"></i> Notes</div>
+                  <div class="sidebar-link" data-path="/home/guest/projects"><i class="fa-solid fa-code"></i> Projects</div>
+                  
+                  <div class="sidebar-category-title">System</div>
+                  <div class="sidebar-link" data-path="/"><i class="fa-solid fa-hard-drive"></i> Root (/)</div>
+                  <div class="sidebar-link" data-path="/etc"><i class="fa-solid fa-gear"></i> /etc</div>
+                  <div class="sidebar-link" data-path="/var/log"><i class="fa-solid fa-file-waveform"></i> /var/log</div>
+                  <div class="sidebar-link" data-path="/bin"><i class="fa-solid fa-terminal"></i> /bin</div>
+                </aside>
+
+                <!-- Files Grid -->
+                <div class="nautilus-view-pane">
+                  <!-- Populated by fileManagerApp.js -->
+                </div>
+              </div>
+
+              <!-- Status bar -->
+              <div class="nautilus-statusbar">
+                <span id="nautilusItemCount">0 items</span>
+                <span id="nautilusSelectedInfo">Select an item to inspect</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WINDOW 3: HACKER MISSIONS APP -->
+        <section class="os-window hidden" id="winQuests">
+          <div class="window-titlebar">
+            <div class="window-controls">
+              <button class="ctrl-btn btn-close" title="Close"></button>
+              <button class="ctrl-btn btn-min" title="Minimize"></button>
+              <button class="ctrl-btn btn-max" title="Maximize"></button>
+            </div>
+            <div class="window-title-group">
+              <i class="fa-solid fa-crosshairs" style="color: var(--accent-pink);"></i>
+              <span>Operation: Linux Guardian (Cyber Quests)</span>
+            </div>
+            <div class="window-extra-actions">
+              <span class="quest-progress-text" id="questProgressText">Mission 1 of 10</span>
+            </div>
+          </div>
+
+          <div class="window-body" style="overflow-y: auto; background: var(--bg-secondary); padding: 16px;">
+            <!-- XP Progress Bar -->
+            <div class="quest-progress-bar-container" style="margin-bottom: 16px;">
+              <div class="quest-progress-fill" id="questProgressFill" style="width: 10%;"></div>
+            </div>
+
+            <!-- Active Mission Card -->
+            <div class="active-mission-card" id="activeMissionCard">
+              <div class="mission-top">
+                <div class="mission-badge" id="missionLevelBadge">LEVEL 01</div>
+                <h4 id="missionTitle">Reconnaissance & Orientation</h4>
+                <span class="mission-reward" id="missionReward">+100 XP</span>
+              </div>
+              <p class="mission-desc" id="missionDesc">
+                Welcome agent. You have been dropped into a compromised system node. Inspect your current directory and locate the mission brief.
+              </p>
+              <div class="mission-objective">
+                <div class="obj-header"><i class="fa-solid fa-bullseye"></i> <strong>Current Objective:</strong></div>
+                <div id="missionObjectiveText" class="obj-text">Run <code>pwd</code> to check your location, then <code>ls -la</code> to reveal all hidden files.</div>
+              </div>
+              <div class="mission-hint-box" id="missionHintBox">
+                <button id="toggleHintBtn" class="hint-toggle-btn"><i class="fa-regular fa-lightbulb"></i> Need a Hint?</button>
+                <div id="missionHintContent" class="hint-content hidden">Try typing <code>ls -la</code> and look for hidden dotfiles like <code>.mission_brief.txt</code>.</div>
+              </div>
+            </div>
+
+            <!-- All Missions Manifest -->
+            <div class="missions-list-container" style="margin-top: 16px;">
+              <h5 class="missions-list-heading"><i class="fa-solid fa-list-check"></i> MISSION MANIFEST</h5>
+              <div class="missions-manifest" id="missionsManifest">
+                <!-- Populated dynamically by questEngine.js -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WINDOW 4: CHEATSHEET APP -->
+        <section class="os-window hidden" id="winCheatsheet">
+          <div class="window-titlebar">
+            <div class="window-controls">
+              <button class="ctrl-btn btn-close" title="Close"></button>
+              <button class="ctrl-btn btn-min" title="Minimize"></button>
+              <button class="ctrl-btn btn-max" title="Maximize"></button>
+            </div>
+            <div class="window-title-group">
+              <i class="fa-solid fa-book-bookmark" style="color: var(--accent-cyan);"></i>
+              <span>Linux Command Lab & Cheatsheet</span>
+            </div>
+          </div>
+
+          <div class="window-body" style="padding: 16px; background: var(--bg-secondary); overflow-y: auto;">
+            <!-- Cheatsheet Search & Category Tabs -->
+            <div class="cheatsheet-controls" style="margin-bottom: 16px;">
+              <div class="cs-search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="csSearchInput" placeholder="Search commands (e.g. grep, chmod, find, ps, tar)..." />
+              </div>
+              <div class="cs-category-tabs" id="csCategoryTabs">
+                <button class="cs-tab active" data-cat="all">All Commands</button>
+                <button class="cs-tab" data-cat="nav">Navigation & Files</button>
+                <button class="cs-tab" data-cat="text">Text & Pipes</button>
+                <button class="cs-tab" data-cat="system">System & Processes</button>
+                <button class="cs-tab" data-cat="perm">Permissions</button>
+                <button class="cs-tab" data-cat="fun">Easter Eggs & ASCII</button>
+              </div>
+            </div>
+
+            <!-- Command Cards Grid -->
+            <div class="cs-cards-grid" id="csCardsGrid">
+              <!-- Populated dynamically by cheatsheet.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- WINDOW 5: SYSTEM MONITOR (HTOP) APP -->
+        <section class="os-window hidden" id="winSysmon">
+          <div class="window-titlebar">
+            <div class="window-controls">
+              <button class="ctrl-btn btn-close" title="Close"></button>
+              <button class="ctrl-btn btn-min" title="Minimize"></button>
+              <button class="ctrl-btn btn-max" title="Maximize"></button>
+            </div>
+            <div class="window-title-group">
+              <i class="fa-solid fa-chart-line" style="color: var(--accent-green);"></i>
+              <span>System Monitor (htop Activity & Processes)</span>
+            </div>
+          </div>
+
+          <div class="window-body">
+            <div class="sysmon-app" id="sysMonitorApp">
+              <!-- Stats Cards -->
+              <div class="sysmon-stats-grid">
+                <div class="sysmon-stat-card">
+                  <div class="sysmon-stat-header">
+                    <span><i class="fa-solid fa-microchip"></i> CPU Usage</span>
+                    <span>4 Cores</span>
+                  </div>
+                  <div class="sysmon-stat-value" id="sysmonCpuVal">24%</div>
+                  <div class="sysmon-bar-track">
+                    <div class="sysmon-bar-fill" id="sysmonCpuBar" style="width: 24%;"></div>
+                  </div>
+                </div>
+
+                <div class="sysmon-stat-card">
+                  <div class="sysmon-stat-header">
+                    <span><i class="fa-solid fa-memory"></i> RAM Memory</span>
+                    <span>DDR4</span>
+                  </div>
+                  <div class="sysmon-stat-value" id="sysmonRamVal">2.34 / 8.0 GB (29%)</div>
+                  <div class="sysmon-bar-track">
+                    <div class="sysmon-bar-fill" id="sysmonRamBar" style="width: 29%; background: linear-gradient(90deg, #00ff66, #00f0ff);"></div>
+                  </div>
+                </div>
+
+                <div class="sysmon-stat-card">
+                  <div class="sysmon-stat-header">
+                    <span><i class="fa-solid fa-hard-drive"></i> VFS Storage</span>
+                    <span>128 MB Alloc</span>
+                  </div>
+                  <div class="sysmon-stat-value" id="sysmonDiskVal">14.8 MB (11%)</div>
+                  <div class="sysmon-bar-track">
+                    <div class="sysmon-bar-fill" id="sysmonDiskBar" style="width: 11%; background: linear-gradient(90deg, #ff007f, #ff9100);"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Process Table -->
+              <div class="sysmon-table-wrap">
+                <table class="sysmon-table">
+                  <thead>
+                    <tr>
+                      <th>PID</th>
+                      <th>USER</th>
+                      <th>COMMAND</th>
+                      <th>CPU%</th>
+                      <th>MEM%</th>
+                      <th>STATUS</th>
+                      <th>ACTION</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sysmonProcBody">
+                    <!-- Populated dynamically by sysMonitorApp.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WINDOW 6: DESKTOP SETTINGS & PERSONALIZATION -->
+        <section class="os-window hidden" id="winSettings">
+          <div class="window-titlebar">
+            <div class="window-controls">
+              <button class="ctrl-btn btn-close" title="Close"></button>
+              <button class="ctrl-btn btn-min" title="Minimize"></button>
+              <button class="ctrl-btn btn-max" title="Maximize"></button>
+            </div>
+            <div class="window-title-group">
+              <i class="fa-solid fa-gear" style="color: #cbd5e1;"></i>
+              <span>Desktop Settings & Personalization</span>
+            </div>
+          </div>
+
+          <div class="window-body">
+            <div class="settings-app">
+              <div class="settings-content">
+                
+                <!-- Wallpaper Selector -->
+                <div class="settings-section">
+                  <h3 class="settings-section-title"><i class="fa-solid fa-image"></i> Desktop Wallpaper</h3>
+                  <div class="wallpapers-grid">
+                    <div class="wallpaper-card wallpaper-ubuntu active" data-wallpaper="wallpaper-ubuntu">
+                      <span>Ubuntu Jammy</span>
+                    </div>
+                    <div class="wallpaper-card wallpaper-kali" data-wallpaper="wallpaper-kali">
+                      <span>Kali Dragon</span>
+                    </div>
+                    <div class="wallpaper-card wallpaper-cyberpunk" data-wallpaper="wallpaper-cyberpunk">
+                      <span>Cyberpunk Neon</span>
+                    </div>
+                    <div class="wallpaper-card wallpaper-matrix" data-wallpaper="wallpaper-matrix">
+                      <span>Matrix Rain</span>
+                    </div>
+                    <div class="wallpaper-card wallpaper-dracula" data-wallpaper="wallpaper-dracula">
+                      <span>Dracula Dusk</span>
+                    </div>
+                    <div class="wallpaper-card wallpaper-space" data-wallpaper="wallpaper-space">
+                      <span>Deep Space Nebula</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- System Info & Reset -->
+                <div class="settings-section">
+                  <h3 class="settings-section-title"><i class="fa-solid fa-circle-info"></i> System Information</h3>
+                  <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 12px; font-size: 12px; font-family: var(--font-mono); line-height: 1.8;">
+                    <div><strong>OS:</strong> CyberBash Linux 2.5.0-LTS (x86_64 Web Virtual Unix)</div>
+                    <div><strong>Kernel:</strong> 6.8.0-virtual-cybernode</div>
+                    <div><strong>Shell:</strong> Bash 5.2 Interactive Interpreter with VFS Layer</div>
+                    <div><strong>Desktop Environment:</strong> CyberGNOME Desktop GUI v2.5</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- App Launcher Slide-Out Drawer -->
+      <div id="appLauncherMenu" class="app-launcher-menu hidden">
+        <div class="launcher-search-box">
+          <i class="fa-solid fa-magnifying-glass" style="color: var(--text-dim);"></i>
+          <input type="text" placeholder="Type to search apps..." />
         </div>
-      </section>
 
-      <!-- Visual VFS Tree Explorer Pane (Right / Secondary) -->
-      <aside class="pane-explorer" id="paneExplorer">
-        <div class="explorer-panel">
-          
-          <div class="explorer-header">
-            <div class="exp-title">
-              <i class="fa-solid fa-folder-tree"></i>
-              <span>VIRTUAL FILESYSTEM</span>
-            </div>
-            <div class="exp-actions">
-              <button id="refreshTreeBtn" class="exp-btn" title="Refresh Tree"><i class="fa-solid fa-rotate"></i></button>
-              <button id="collapseAllBtn" class="exp-btn" title="Collapse All"><i class="fa-solid fa-compress"></i></button>
-              <button id="closeExplorerBtn" class="exp-btn" title="Close Pane"><i class="fa-solid fa-xmark"></i></button>
+        <div class="launcher-items-list">
+          <div class="launcher-item" data-app="terminal">
+            <div class="launcher-item-icon" style="background: #1e1e2e; color: var(--accent-cyan);"><i class="fa-solid fa-terminal"></i></div>
+            <div class="launcher-item-info">
+              <h4>Terminal (Bash)</h4>
+              <p>Full Linux shell with commands, piping, and nano editor</p>
             </div>
           </div>
 
-          <!-- Quick VFS Search -->
-          <div class="exp-search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="vfsSearchInput" placeholder="Filter files (find/grep)..." />
-          </div>
-
-          <!-- Visual Tree Container -->
-          <div class="vfs-tree-container" id="vfsTreeContainer">
-            <!-- Dynamic tree populated by explorerView.js -->
-          </div>
-
-          <!-- File Inspector / Preview Drawer -->
-          <div class="file-inspector" id="fileInspector">
-            <div class="inspect-header">
-              <span id="inspectFilename"><i class="fa-solid fa-file-lines"></i> file_preview</span>
-              <span id="inspectSize" class="inspect-badge">0 B</span>
+          <div class="launcher-item" data-app="files">
+            <div class="launcher-item-icon" style="background: #e95420; color: #fff;"><i class="fa-solid fa-folder-open"></i></div>
+            <div class="launcher-item-info">
+              <h4>Files (Nautilus)</h4>
+              <p>Browse directories, preview files, and manage VFS</p>
             </div>
-            <div class="inspect-details">
-              <div class="inspect-row"><span>Path:</span> <code id="inspectPath">/</code></div>
-              <div class="inspect-row"><span>Permissions:</span> <code id="inspectPerms">-rw-r--r--</code></div>
-              <div class="inspect-row"><span>Modified:</span> <span id="inspectModified">Just now</span></div>
-            </div>
-            <pre class="inspect-content" id="inspectContent">// Select a file from the tree to preview</pre>
           </div>
 
+          <div class="launcher-item" data-app="quests">
+            <div class="launcher-item-icon" style="background: #ff007f; color: #fff;"><i class="fa-solid fa-crosshairs"></i></div>
+            <div class="launcher-item-info">
+              <h4>Operation: Linux Guardian</h4>
+              <p>10-Level Hacker Quests, objectives & XP progression</p>
+            </div>
+          </div>
+
+          <div class="launcher-item" data-app="cheatsheet">
+            <div class="launcher-item-icon" style="background: #00f0ff; color: #000;"><i class="fa-solid fa-book-bookmark"></i></div>
+            <div class="launcher-item-info">
+              <h4>Command Lab & Cheatsheet</h4>
+              <p>Interactive Linux command reference and example builder</p>
+            </div>
+          </div>
+
+          <div class="launcher-item" data-app="sysmon">
+            <div class="launcher-item-icon" style="background: #00ff66; color: #031407;"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="launcher-item-info">
+              <h4>System Monitor (htop)</h4>
+              <p>Real-time CPU/RAM meters and process manager</p>
+            </div>
+          </div>
+
+          <div class="launcher-item" data-app="settings">
+            <div class="launcher-item-icon" style="background: #4d5b75; color: #fff;"><i class="fa-solid fa-sliders"></i></div>
+            <div class="launcher-item-info">
+              <h4>Desktop Settings</h4>
+              <p>Customize wallpapers, themes, sound, and display filters</p>
+            </div>
+          </div>
         </div>
-      </aside>
+      </div>
+
+      <!-- Desktop Right-Click Context Menu -->
+      <div id="desktopContextMenu" class="desktop-context-menu hidden">
+        <div class="ctx-item" data-action="terminal"><i class="fa-solid fa-terminal"></i> Open Terminal</div>
+        <div class="ctx-item" data-action="files"><i class="fa-solid fa-folder-open"></i> Open Files</div>
+        <div class="ctx-item" data-action="newfolder"><i class="fa-solid fa-folder-plus"></i> New Folder</div>
+        <div class="ctx-separator"></div>
+        <div class="ctx-item" data-action="sysmon"><i class="fa-solid fa-chart-line"></i> System Monitor</div>
+        <div class="ctx-item" data-action="settings"><i class="fa-solid fa-sliders"></i> Change Wallpaper / Settings</div>
+      </div>
 
     </main>
-
-    <!-- Hacker Quest Drawer / HUD -->
-    <div class="quest-drawer" id="questDrawer">
-      <div class="quest-drawer-header">
-        <div class="qd-title">
-          <i class="fa-solid fa-shield-halved"></i>
-          <div>
-            <h3>OPERATION: LINUX GUARDIAN</h3>
-            <p>10-Level Sysadmin & Cyber Hacker Mastery Quest</p>
-          </div>
-        </div>
-        <div class="qd-actions">
-          <span class="quest-progress-text" id="questProgressText">Mission 1 of 10</span>
-          <button id="closeQuestDrawerBtn" class="exp-btn"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-      </div>
-
-      <!-- XP Progress Bar -->
-      <div class="quest-progress-bar-container">
-        <div class="quest-progress-fill" id="questProgressFill" style="width: 10%;"></div>
-      </div>
-
-      <!-- Active Mission Card -->
-      <div class="active-mission-card" id="activeMissionCard">
-        <div class="mission-top">
-          <div class="mission-badge" id="missionLevelBadge">LEVEL 01</div>
-          <h4 id="missionTitle">Reconnaissance & Orientation</h4>
-          <span class="mission-reward" id="missionReward">+100 XP</span>
-        </div>
-        <p class="mission-desc" id="missionDesc">
-          Welcome agent. You have been dropped into a compromised system node. Inspect your current directory and locate the mission brief.
-        </p>
-        <div class="mission-objective">
-          <div class="obj-header"><i class="fa-solid fa-bullseye"></i> <strong>Current Objective:</strong></div>
-          <div id="missionObjectiveText" class="obj-text">Run <code>pwd</code> to check your location, then <code>ls -la</code> to reveal all hidden files.</div>
-        </div>
-        <div class="mission-hint-box" id="missionHintBox">
-          <button id="toggleHintBtn" class="hint-toggle-btn"><i class="fa-regular fa-lightbulb"></i> Need a Hint?</button>
-          <div id="missionHintContent" class="hint-content hidden">Try typing <code>ls -la</code> and look for hidden dotfiles like <code>.mission_brief.txt</code>.</div>
-        </div>
-      </div>
-
-      <!-- All Missions List Overview -->
-      <div class="missions-list-container">
-        <h5 class="missions-list-heading"><i class="fa-solid fa-list-check"></i> MISSION MANIFEST</h5>
-        <div class="missions-manifest" id="missionsManifest">
-          <!-- Populated dynamically by questEngine.js -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Cheatsheet & Command Builder Modal -->
-    <div class="modal-backdrop hidden" id="cheatsheetModal">
-      <div class="modal-container">
-        <div class="modal-header">
-          <div class="modal-title">
-            <i class="fa-solid fa-terminal"></i>
-            <div>
-              <h3>Interactive Linux Command Lab & Cheatsheet</h3>
-              <p>Search essential Unix tools, explore common flags, and build ready-to-run commands.</p>
-            </div>
-          </div>
-          <button class="modal-close-btn" id="closeCheatsheetModalBtn"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-
-        <div class="modal-body">
-          <!-- Cheatsheet Search & Category Tabs -->
-          <div class="cheatsheet-controls">
-            <div class="cs-search-wrapper">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" id="csSearchInput" placeholder="Search commands (e.g. grep, chmod, find, ps, tar)..." />
-            </div>
-            <div class="cs-category-tabs" id="csCategoryTabs">
-              <button class="cs-tab active" data-cat="all">All Commands</button>
-              <button class="cs-tab" data-cat="nav">Navigation & Files</button>
-              <button class="cs-tab" data-cat="text">Text & Pipes</button>
-              <button class="cs-tab" data-cat="system">System & Processes</button>
-              <button class="cs-tab" data-cat="perm">Permissions</button>
-              <button class="cs-tab" data-cat="fun">Easter Eggs & ASCII</button>
-            </div>
-          </div>
-
-          <!-- Command Cards Grid -->
-          <div class="cs-cards-grid" id="csCardsGrid">
-            <!-- Populated dynamically by cheatsheet.js -->
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Celebration Achievement Toast Overlay -->
     <div id="toastContainer" class="toast-container"></div>

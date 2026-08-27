@@ -176,6 +176,19 @@ html, body {
   user-select: none;
 }
 
+/* Visibility Utilities */
+.hidden,
+.os-window.hidden,
+.app-launcher-menu.hidden,
+.desktop-context-menu.hidden,
+.nano-editor.hidden,
+.hint-content.hidden,
+.theme-menu.hidden,
+.modal-backdrop.hidden {
+  display: none !important;
+}
+
+
 /* Scrollbar Customization */
 ::-webkit-scrollbar {
   width: 8px;

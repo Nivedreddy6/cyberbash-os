@@ -1,106 +1,219 @@
-# ⚡ CyberBash // Linux CLI Simulator & Hacker Quest OS
+<p align="center">
+  <img src="assets/banner.jpg" alt="CyberBash OS Header Banner" width="100%" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 240, 255, 0.35);" />
+</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/OS-Linux%20Simulator-00f0ff?style=for-the-badge&logo=linux&logoColor=white" alt="Linux OS" />
-  <img src="https://img.shields.io/badge/Engine-Vanilla%20ES6%20%2B%20WebAudio-ff007f?style=for-the-badge&logo=javascript&logoColor=white" alt="Engine" />
-  <img src="https://img.shields.io/badge/License-MIT-00ff66?style=for-the-badge" alt="License" />
-  <img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-fcee0a?style=for-the-badge&logo=githubactions&logoColor=black" alt="Deploy" />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&multiline=true&width=750&height=80&lines=%E2%9A%A1+CYBERBASH+OS+%3A%3A+RETRO-FUTURISTIC+WEB+LINUX+DESKTOP;%F0%9F%9B%A1%EF%B8%8F+HACKER+QUEST+ENGINE+%2B+INTERACTIVE+VIRTUAL+UNIX+SHELL;%F0%9F%8E%A8+6+NEON+CYBER+THEMES+%7C+SYNTHETIC+WEB+AUDIO+%7C+NANO+EDITOR" alt="CyberBash Typing Banner" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/OS-CyberBash_Linux_v2.5-00f0ff?style=for-the-badge&logo=linux&logoColor=black" alt="Linux OS" />
+  <img src="https://img.shields.io/badge/Engine-ES6_Modules_%2B_VFS-ff007f?style=for-the-badge&logo=javascript&logoColor=white" alt="Engine" />
+  <img src="https://img.shields.io/badge/Audio-Web_Audio_API_Synth-00ff66?style=for-the-badge&logo=audiomack&logoColor=black" alt="Audio" />
+  <img src="https://img.shields.io/badge/Status-100%25_Operational-fcee0a?style=for-the-badge&logo=statuspage&logoColor=black" alt="Status" />
+  <img src="https://img.shields.io/badge/License-MIT-9d4edd?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License" />
+</p>
+
+<p align="center">
+  <a href="#-quick-deploy--live-demo"><img src="https://img.shields.io/badge/%F0%9F%9A%80_Launch-Live_Simulation-00f0ff?style=flat-square" alt="Launch Live Demo" /></a>
+  <a href="#-10-level-hacker-quest-matrix"><img src="https://img.shields.io/badge/%F0%9F%8E%AF_Missions-10_Quests_Active-ff007f?style=flat-square" alt="Hacker Quests" /></a>
+  <a href="#-full-command-lab-reference"><img src="https://img.shields.io/badge/%F0%9F%93%96_Lab-Cheat_Sheet-00ff66?style=flat-square" alt="Command Lab" /></a>
+  <a href="#%EF%B8%8F-desktop-architecture"><img src="https://img.shields.io/badge/%F0%9F%8F%97%EF%B8%8F_Architecture-VFS_%2B_EventLoop-fcee0a?style=flat-square" alt="Architecture" /></a>
 </p>
 
 ---
 
-## 🌌 Overview
+## 🌌 The Mission
 
-**CyberBash** is a gamified, retro-futuristic **Linux CLI Simulator**, **Hacker Quest Game**, and **Visual File Explorer** built with modern web technologies (HTML5, Vanilla CSS3, ES6 Modules, and Web Audio API).
-
-It provides an authentic Unix shell experience running directly in your browser with persistent in-memory storage, rich command pipelines, an interactive `nano` text editor, and a 10-level cyber quest: **"Operation: Linux Guardian"**.
-
----
-
-## ✨ Key Features
-
-### 💻 1. Authentic Unix Terminal & Shell
-- **Virtual File System (VFS)**: Complete persistent `/bin`, `/etc`, `/home/guest`, `/var/log`, `/secrets` directory hierarchy with real metadata, timestamps, and permissions (`chmod 755`).
-- **Pipes & Redirection**: Chain streams effortlessly (e.g., `cat /var/log/syslog | grep CRITICAL | wc -l`, `echo "hello" > test.txt`, `>>`).
-- **Interactive Full-Screen Nano Editor**: Launch `nano filename.txt` with real keyboard shortcuts (`Ctrl+O` to write out, `Ctrl+X` to exit).
-- **Process Management**: View running daemons with `ps aux` and `top`, or terminate rogue background miners with `kill <PID>`.
-- **Smart Autocompletion**: Press <kbd>Tab</kbd> for command and path autocomplete, and navigate previous commands with <kbd>↑</kbd> and <kbd>↓</kbd>.
-
-### 🛡️ 2. "Operation: Linux Guardian" (10-Level Hacker Quest)
-Gamified progressive missions to learn and test your Linux mastery:
-1. **Level 1**: Reconnaissance (`pwd`, `ls -la`)
-2. **Level 2**: Deciphering Hidden Briefs (`cat .mission_brief.txt`)
-3. **Level 3**: Forensic Log Analysis (`grep CRITICAL /var/log/syslog`)
-4. **Level 4**: Neutralizing Rogue Crypto Daemon (`kill 7392`)
-5. **Level 5**: Security Patch Crafting (`nano notes/security_patch.txt`)
-6. **Level 6**: Directory Architect (`mkdir -p backups/secure_logs && tree`)
-7. **Level 7**: Permission Hardening (`chmod 700 .bashrc`)
-8. **Level 8**: Stream Pipelines (`cat /etc/passwd | wc -l`)
-9. **Level 9**: Root Escalation Protocol (`sudo su`)
-10. **Level 10**: Matrix Awakening (`neofetch` & `matrix`)
-
-### 🌳 3. Dual-Pane Visual VFS Tree & File Inspector
-- Real-time reactive visual tree displaying file icons, executable flags, folder expanders, and file sizes.
-- Click any file to inspect permissions, paths, modified timestamps, and live content previews.
-
-### 🎨 4. Retro-Futuristic Themes & Synthetic Audio
-- **6 Cyber Themes**: Cyberpunk Neon, Matrix Green, Dracula Dark, Nord Frost, Retro CRT Amber, and Ubuntu Classic.
-- **Audio Engine**: Procedural Web Audio API mechanical keystroke clatter, terminal bells, and quest fanfare chimes.
-- **CRT Phosphor Screen Overlay**: Real-time scanlines and phosphor bloom toggles.
+> **CyberBash OS** transforms your browser into a full-featured, retro-futuristic **Linux GUI Desktop Environment**, **Interactive Bash Shell Interpreter**, and **Gamified Hacker Quest Simulator** (*"Operation: Linux Guardian"*). 
+>
+> Built entirely with **Zero Heavy Frameworks** (Vanilla ES6 Modules, Hardware-Accelerated CSS3, Dynamic Canvas Digital Rain, and Web Audio Synthesizers), it provides instantaneous boot times and an authentic Unix terminal workflow.
 
 ---
 
-## 🚀 Supported Commands
+## ⚡ Interactive Feature Showcase
 
-| Category | Commands |
-|---|---|
-| **Navigation & Files** | `ls`, `cd`, `pwd`, `mkdir`, `touch`, `rm`, `tree`, `find`, `chmod` |
-| **Text Processing** | `cat`, `head`, `tail`, `grep`, `wc`, `echo`, `nano` |
-| **System & Processes** | `ps`, `top`, `kill`, `uptime`, `whoami`, `hostname`, `uname`, `free`, `sudo` |
-| **Shell Features** | `export`, `alias`, `history`, `clear`, `help`, `reset`, `date`, `man` |
-| **Easter Eggs & ASCII** | `neofetch`, `cowsay`, `fortune`, `matrix`, `sl`, `weather` |
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">🖥️ Authentic Unix Shell & Piping</h3>
+      <p>Execute real command pipelines with stream redirection, process isolation, and environment variables:</p>
+      <pre><code><span style="color: #00f0ff;">guest@cybernode</span>:<span style="color: #fcee0a;">~</span>$ cat /var/log/syslog | grep CRITICAL | wc -l
+<span style="color: #00ff66;">4</span>
+<span style="color: #00f0ff;">guest@cybernode</span>:<span style="color: #fcee0a;">~</span>$ ps aux | grep crypto
+<span style="color: #ff007f;">7392  guest  99.4%  ./cryptominer</span>
+<span style="color: #00f0ff;">guest@cybernode</span>:<span style="color: #fcee0a;">~</span>$ kill -9 7392
+<span style="color: #00ff66;">[+] Process 7392 terminated.</span></code></pre>
+    </td>
+    <td width="50%">
+      <h3 align="center">📁 Nautilus Graphical File Manager</h3>
+      <p>Dual-pane visual VFS explorer with reactive directory breadcrumbs, permission badges, and instant file inspection:</p>
+      <ul>
+        <li>🗂️ <strong>Hierarchical Virtual VFS</strong> (<code>/bin</code>, <code>/etc</code>, <code>/home/guest</code>, <code>/var/log</code>)</li>
+        <li>⚡ <strong>Click Navigation & Fast Preview</strong></li>
+        <li>📝 <strong>One-Click Nano Editor Integration</strong></li>
+        <li>💾 <strong>Real-time <code>localStorage</code> Persistence</strong></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">📝 GNU Nano Full-Screen Editor</h3>
+      <p>In-terminal text editor with keyboard shortcuts (<code>Ctrl+O</code> to write out, <code>Ctrl+X</code> to exit) and live state tracking:</p>
+      <pre><code>  GNU nano 7.2         /home/guest/notes/patch.txt
+
+  [+] SEC_PATCH_09: Hardened firewall rules
+  [+] Escalated guest permissions to sys_admin
+  
+^G Get Help  ^O WriteOut  ^R Read File  ^X Exit</code></pre>
+    </td>
+    <td width="50%">
+      <h3 align="center">🎨 6 Retro Themes & Audio Synth</h3>
+      <p>Tailored cyberpunk aesthetic engine with procedural soundscapes:</p>
+      <ul>
+        <li>✨ <strong>Cyberpunk Neon</strong>, <strong>Matrix Rain</strong>, <strong>Dracula Dark</strong></li>
+        <li>❄️ <strong>Nord Frost</strong>, <strong>Amber CRT Retro</strong>, <strong>Ubuntu Jammy</strong></li>
+        <li>🔊 <strong>Web Audio Synthesizer</strong> (Mechanical clicks & fanfare)</li>
+        <li>📺 <strong>Real-time Phosphor CRT Scanline Simulation</strong></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🛠️ Quick Start & Local Preview
+## 🎯 10-Level Hacker Quest Matrix
 
-Simply open `index.html` in any modern web browser or start a local server:
+<details open>
+<summary><b>🔥 Click to expand "Operation: Linux Guardian" Level Walkthrough</b></summary>
+<br/>
+
+| Level | Mission Codename | Objective Description | Command Pattern | XP Reward |
+| :---: | :--- | :--- | :--- | :---: |
+| `01` | **Reconnaissance** | Inspect current coordinates and reveal all hidden files | `pwd && ls -la` | `+100 XP` |
+| `02` | **Deciphering Briefs** | Extract encrypted intelligence brief from hidden dotfiles | `cat .mission_brief.txt` | `+150 XP` |
+| `03` | **Forensic Log Audit** | Search kernel audit trail in syslog for breach notices | `grep CRITICAL /var/log/syslog` | `+200 XP` |
+| `04` | **Neutralize Daemon** | Locate and terminate rogue high-CPU cryptominer PID | `kill 7392` | `+250 XP` |
+| `05` | **Security Patching** | Craft emergency security patch in notes directory | `nano notes/security_patch.txt` | `+300 XP` |
+| `06` | **Directory Architect** | Construct nested backup hierarchies & render tree | `mkdir -p backups/logs && tree`| `+350 XP` |
+| `07` | **Permission Shield** | Harden permissions on configuration profile to 700 | `chmod 700 .bashrc` | `+400 XP` |
+| `08` | **Pipeline Stream** | Master stream manipulation to count system accounts | `cat /etc/passwd \| wc -l` | `+450 XP` |
+| `09` | **Root Escalation** | Elevate terminal session security privileges | `sudo su` | `+500 XP` |
+| `10` | **Matrix Awakening** | Benchmark system specifications and enter the grid | `neofetch && matrix` | `+1000 XP` |
+
+</details>
+
+---
+
+## 🛠️ Full Command Lab Reference
 
 ```bash
-# Using Python
-python -m http.server 8080
+# NAVIGATION & FILESYSTEM
+ls -la           # List all files including hidden dotfiles with permissions
+cd <dir>         # Navigate through directory hierarchies (cd .., cd ~, cd /)
+pwd              # Print absolute working directory path
+mkdir -p <dir>   # Create nested folder structures recursively
+touch <file>     # Instantiate empty file or refresh timestamp
+rm -r <target>   # Remove file or recursively delete directories
+tree             # Render visual ASCII directory hierarchy
+chmod <mode>     # Update octal permissions (e.g., chmod 755, chmod 700)
 
-# Using Node.js npx
-npx serve .
+# TEXT PROCESSING & PIPELINES
+cat <file>       # Display file stream content
+grep <pattern>   # Regex pattern matching (e.g., grep -i "critical" /var/log/syslog)
+wc -l <file>     # Count lines, words, or character bytes in stream
+nano <file>      # Interactive full-screen terminal text editor
+echo "text" > f  # Overwrite file with text stream
+echo "text" >> f # Append text stream to file
+
+# PROCESS MANAGEMENT & SYSTEM
+ps aux           # Display real-time active system daemons & resource consumption
+kill -9 <PID>    # Terminate process by Process ID
+sudo su          # Elevate session privileges to root administrative mode
+date / uptime    # Inspect system clock and operational duration
+clear / Ctrl+L   # Clear terminal screen buffer
+
+# EASTER EGGS & VISUAL EFFECTS
+neofetch         # Display cyberpunk ASCII logo and system hardware specs
+matrix           # Toggle Matrix canvas digital green phosphor rain
+cowsay <msg>     # Configurable talking cyber ASCII cow
+sl               # Steam Locomotive ASCII train animation
 ```
 
-Open `http://localhost:8080` in your browser.
+---
+
+## 🏗️ Desktop Architecture
+
+```mermaid
+graph TD
+    subgraph UI_Layer ["🖥️ CyberGNOME Desktop GUI"]
+        WM[WindowManager Controller]
+        TopBar[Top System Panel & Live Clock]
+        Dock[Ubuntu / Kali Left Dock]
+        Nautilus[Files App Nautilus GUI]
+        SysMon[System Monitor htop]
+        TermView[Terminal View & ANSI Renderer]
+    end
+
+    subgraph Core_Engine ["⚙️ CyberBash Core Engine"]
+        Shell[Shell Interpreter & Tokenizer]
+        VFS[Virtual File System Memory & Storage]
+        Audio[Web Audio API Procedural Synth]
+        Quest[Hacker Quest Engine & XP Matrix]
+    end
+
+    Dock -->|Open / Focus| WM
+    TopBar -->|Theme / Audio / App Launcher| WM
+    WM -->|Z-Index / Drag / Resize| TermView
+    WM -->|Z-Index / Drag / Resize| Nautilus
+    WM -->|Z-Index / Drag / Resize| SysMon
+    
+    TermView -->|Commands| Shell
+    Nautilus -->|Live Path & Read/Write| VFS
+    Shell -->|Pipes / Redirection / CRUD| VFS
+    Shell -->|Command Interception| Quest
+    Quest -->|XP Gain / Audio Cues| Audio
+    VFS -->|Persistence| LocalStorage[(Browser LocalStorage)]
+```
 
 ---
 
-## 📤 Push to GitHub & Deploy to GitHub Pages
+## ⌨️ Desktop Keyboard Shortcuts
 
-To host this project on your GitHub profile (`Nivedreddy6`):
-
-1. **Create a new repository** on GitHub (e.g., `linux-cyberbash` or `cyberbash-os`):
-   - Go to [https://github.com/new](https://github.com/new)
-   - Repository name: `linux-cyberbash`
-   - Leave it public and click **Create repository**.
-
-2. **Run these commands in your terminal**:
-   ```bash
-   git remote add origin https://github.com/Nivedreddy6/linux-cyberbash.git
-   git branch -M main
-   git push -u origin main
-   ```
-
-3. **Enable GitHub Pages**:
-   - Go to your repository on GitHub -> **Settings** -> **Pages**.
-   - Under **Build and deployment** -> **Source**, select **GitHub Actions**.
-   - Your site will automatically deploy to `https://nivedreddy6.github.io/linux-cyberbash/`!
+| Shortcut | Action | Scope |
+| :--- | :--- | :--- |
+| <kbd>Tab</kbd> | **Smart Autocompletion** (Commands & VFS Paths) | Terminal |
+| <kbd>↑</kbd> / <kbd>↓</kbd> | **Command History Navigation** | Terminal |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd> | **Clear Screen Buffer** | Terminal |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | **Interrupt / SIGINT** | Terminal |
+| <kbd>Ctrl</kbd> + <kbd>O</kbd> | **Save / WriteOut File** | Nano Editor |
+| <kbd>Ctrl</kbd> + <kbd>X</kbd> | **Exit Editor** | Nano Editor |
+| <kbd>Double Click</kbd> | **Maximize / Restore Window** | Window Titlebar |
 
 ---
 
-## 📜 License
+## 🚀 Quick Deploy & Live Demo
 
-Distributed under the [MIT License](LICENSE). Built with ❤️ by [Nivedreddy6](https://github.com/Nivedreddy6).
+### 1. Run with Node.js
+```bash
+git clone https://github.com/Nivedreddy6/linux.git
+cd linux
+node server.js
+# Access at http://localhost:3000
+```
+
+### 2. Run with Python
+```bash
+python -m http.server 3000
+```
+
+### 3. Deploy to GitHub Pages
+The project is built with static ES6 web modules with zero build steps required. Simply enable **GitHub Pages** on the `main` branch under **Settings > Pages**.
+
+---
+
+<p align="center">
+  <sub>Engineered with ⚡ by <a href="https://github.com/Nivedreddy6"><strong>Nivedreddy6</strong></a> // Licensed under <strong>MIT</strong></sub>
+</p>
