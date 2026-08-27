@@ -1,0 +1,287 @@
+/* ==========================================================================
+   CYBERBASH // HACKER QUEST ENGINE & MISSION HUD STYLES
+   ========================================================================== */
+
+.quest-drawer {
+  position: fixed;
+  top: 56px;
+  right: 0;
+  bottom: 0;
+  width: 420px;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border-color);
+  box-shadow: -15px 0 40px rgba(0, 0, 0, 0.7);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform var(--transition-bounce);
+  backdrop-filter: blur(16px);
+}
+
+.quest-drawer.open {
+  transform: translateX(0);
+}
+
+/* Quest Drawer Header */
+.quest-drawer-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.qd-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qd-title i {
+  font-size: 24px;
+  color: var(--accent-pink);
+  text-shadow: 0 0 10px var(--accent-pink);
+}
+
+.qd-title h3 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.qd-title p {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.qd-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quest-progress-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-cyan);
+}
+
+/* Progress Fill Bar */
+.quest-progress-bar-container {
+  height: 4px;
+  background: var(--bg-tertiary);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.quest-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+  box-shadow: 0 0 10px var(--accent-cyan);
+  transition: width 0.4s ease;
+}
+
+/* Active Mission Card */
+.active-mission-card {
+  margin: 16px;
+  padding: 16px;
+  background: radial-gradient(circle at top left, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+  border: 1px solid var(--accent-cyan);
+  border-radius: var(--radius-md);
+  box-shadow: var(--glow-cyan);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.mission-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mission-badge {
+  background: var(--accent-cyan);
+  color: #000;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.mission-top h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.mission-reward {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-yellow);
+}
+
+.mission-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+
+.mission-objective {
+  background: rgba(0, 0, 0, 0.4);
+  border-left: 3px solid var(--accent-pink);
+  padding: 10px 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.obj-header {
+  font-size: 11px;
+  color: var(--accent-pink);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.obj-text {
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.obj-text code {
+  background: var(--bg-tertiary);
+  color: var(--accent-cyan);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}
+
+/* Hint Box */
+.mission-hint-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hint-toggle-btn {
+  background: transparent;
+  border: 1px dashed var(--border-color);
+  color: var(--text-muted);
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.hint-toggle-btn:hover {
+  border-color: var(--accent-yellow);
+  color: var(--accent-yellow);
+}
+
+.hint-content {
+  background: rgba(252, 238, 10, 0.08);
+  border: 1px solid rgba(252, 238, 10, 0.25);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--accent-yellow);
+}
+
+.hint-content.hidden {
+  display: none;
+}
+
+/* Missions Manifest List */
+.missions-list-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.missions-list-heading {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.manifest-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.manifest-item.locked {
+  opacity: 0.45;
+  filter: grayscale(0.8);
+}
+
+.manifest-item.current {
+  border-color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.08);
+}
+
+.manifest-item.completed {
+  border-color: var(--accent-green);
+  background: rgba(0, 255, 102, 0.05);
+}
+
+.mi-status-icon {
+  font-size: 16px;
+}
+
+.manifest-item.completed .mi-status-icon { color: var(--accent-green); }
+.manifest-item.current .mi-status-icon { color: var(--accent-cyan); }
+.manifest-item.locked .mi-status-icon { color: var(--text-dim); }
+
+.mi-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mi-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.mi-desc {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.mi-xp {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--accent-yellow);
+}
