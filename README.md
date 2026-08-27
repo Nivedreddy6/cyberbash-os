@@ -1,9 +1,11 @@
 <p align="center">
-  <img src="assets/banner.jpg" alt="CyberBash OS Header Banner" width="100%" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 240, 255, 0.35);" />
+  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/banner.jpg" alt="CyberBash OS Header Banner" width="100%" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 240, 255, 0.35);" />
+  </a>
 </p>
 
 <p align="center">
-  <a href="https://git.io/typing-svg">
+  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&multiline=true&width=750&height=80&lines=%E2%9A%A1+CYBERBASH+OS+%3A%3A+RETRO-FUTURISTIC+WEB+LINUX+DESKTOP;%F0%9F%9B%A1%EF%B8%8F+HACKER+QUEST+ENGINE+%2B+INTERACTIVE+VIRTUAL+UNIX+SHELL;%F0%9F%8E%A8+6+NEON+CYBER+THEMES+%7C+SYNTHETIC+WEB+AUDIO+%7C+NANO+EDITOR" alt="CyberBash Typing Banner" />
   </a>
 </p>
