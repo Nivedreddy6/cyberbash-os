@@ -20,9 +20,12 @@
 </p>
 
 <p align="center">
-  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer">
-    <img src="assets/quick_nav.svg" alt="CyberBash Quick Navigation Dock" width="100%" />
-  </a>
+  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer"><img src="assets/btn_demo.svg" alt="Live Demo" height="34" /></a>
+  <a href="#-system-overview"><img src="assets/btn_overview.svg" alt="Overview" height="34" /></a>
+  <a href="#-core-feature-matrix"><img src="assets/btn_features.svg" alt="Features" height="34" /></a>
+  <a href="#-10-level-hacker-quest-manifest"><img src="assets/btn_quests.svg" alt="Quests" height="34" /></a>
+  <a href="#-full-command-lab-reference"><img src="assets/btn_commands.svg" alt="Commands" height="34" /></a>
+  <a href="#-desktop-keyboard-shortcuts"><img src="assets/btn_shortcuts.svg" alt="Shortcuts" height="34" /></a>
 </p>
 
 <p align="center">
