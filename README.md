@@ -20,17 +20,9 @@
 </p>
 
 <p align="center">
-  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/🚀_LAUNCH_LIVE_SIMULATION-00f0ff?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Launch Live Simulation" /></a>
-  <a href="#-system-overview"><img src="https://img.shields.io/badge/🌌_SYSTEM_OVERVIEW-a855f7?style=for-the-badge&logo=linux&logoColor=white" alt="System Overview" /></a>
-  <a href="#-core-feature-matrix"><img src="https://img.shields.io/badge/⚡_FEATURE_MATRIX-00ff66?style=for-the-badge&logo=sparkles&logoColor=black" alt="Feature Matrix" /></a>
-  <a href="#-6-neon-aesthetic-themes"><img src="https://img.shields.io/badge/🎨_NEON_THEMES-ff007f?style=for-the-badge&logo=artstation&logoColor=white" alt="Neon Themes" /></a>
-</p>
-
-<p align="center">
-  <a href="#-10-level-hacker-quest-manifest"><img src="https://img.shields.io/badge/🎯_QUEST_MANIFEST-fcee0a?style=for-the-badge&logo=target&logoColor=black" alt="Quest Manifest" /></a>
-  <a href="#-full-command-lab-reference"><img src="https://img.shields.io/badge/📖_COMMAND_LAB-38bdf8?style=for-the-badge&logo=gnubash&logoColor=black" alt="Command Lab" /></a>
-  <a href="#-architecture--data-flow"><img src="https://img.shields.io/badge/🏗️_ARCHITECTURE-fb923c?style=for-the-badge&logo=diagramsdotnet&logoColor=black" alt="Architecture" /></a>
-  <a href="#-desktop-keyboard-shortcuts"><img src="https://img.shields.io/badge/⌨️_SHORTCUTS-ec4899?style=for-the-badge&logo=ghostery&logoColor=white" alt="Shortcuts" /></a>
+  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/quick_nav.svg" alt="CyberBash Quick Navigation Dock" width="100%" />
+  </a>
 </p>
 
 <p align="center">

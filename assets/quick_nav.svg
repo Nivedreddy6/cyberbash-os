@@ -1,0 +1,57 @@
+<svg width="100%" height="70" viewBox="0 0 1100 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dockBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121526" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0a0c14" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="dockBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="33%" stop-color="#ff007f" />
+      <stop offset="66%" stop-color="#fcee0a" />
+      <stop offset="100%" stop-color="#00ff66" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .nav-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 700; text-anchor: middle; letter-spacing: 0.5px; }
+  </style>
+
+  <!-- Main Dock Shell -->
+  <rect x="2" y="4" width="1096" height="60" rx="30" fill="url(#dockBg)" stroke="url(#dockBorder)" stroke-width="1.5" />
+
+  <!-- 1. Live Web App -->
+  <g transform="translate(20, 14)">
+    <rect x="0" y="0" width="165" height="40" rx="20" fill="#00f0ff" fill-opacity="0.12" stroke="#00f0ff" stroke-width="1.2" />
+    <text x="82" y="25" fill="#00f0ff" class="nav-label">🚀 LIVE DEMO</text>
+  </g>
+
+  <!-- 2. System Overview -->
+  <g transform="translate(195, 14)">
+    <rect x="0" y="0" width="165" height="40" rx="20" fill="#a855f7" fill-opacity="0.12" stroke="#a855f7" stroke-width="1.2" />
+    <text x="82" y="25" fill="#c084fc" class="nav-label">🌌 OVERVIEW</text>
+  </g>
+
+  <!-- 3. Core Features -->
+  <g transform="translate(370, 14)">
+    <rect x="0" y="0" width="165" height="40" rx="20" fill="#00ff66" fill-opacity="0.12" stroke="#00ff66" stroke-width="1.2" />
+    <text x="82" y="25" fill="#00ff66" class="nav-label">⚡ FEATURES</text>
+  </g>
+
+  <!-- 4. Quest Manifest -->
+  <g transform="translate(545, 14)">
+    <rect x="0" y="0" width="165" height="40" rx="20" fill="#fcee0a" fill-opacity="0.12" stroke="#fcee0a" stroke-width="1.2" />
+    <text x="82" y="25" fill="#fcee0a" class="nav-label">🎯 QUESTS</text>
+  </g>
+
+  <!-- 5. Command Lab -->
+  <g transform="translate(720, 14)">
+    <rect x="0" y="0" width="165" height="40" rx="20" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-width="1.2" />
+    <text x="82" y="25" fill="#38bdf8" class="nav-label">📖 COMMANDS</text>
+  </g>
+
+  <!-- 6. Shortcuts -->
+  <g transform="translate(895, 14)">
+    <rect x="0" y="0" width="180" height="40" rx="20" fill="#ff007f" fill-opacity="0.12" stroke="#ff007f" stroke-width="1.2" />
+    <text x="90" y="25" fill="#ff007f" class="nav-label">⌨️ SHORTCUTS</text>
+  </g>
+</svg>
