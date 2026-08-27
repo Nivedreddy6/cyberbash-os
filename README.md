@@ -52,12 +52,11 @@
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
-> [!TIP]
-> ### ⚡ Live Web Deployment Ready!
-> **Experience CyberBash OS directly in your browser with zero installation:**  
-> 👉 **[https://nivedreddy6.github.io/cyberbash-os/](https://nivedreddy6.github.io/cyberbash-os/)**
-
----
+<p align="center">
+  <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/live_launch_card.svg" alt="Enter CyberBash OS Live Simulation" width="85%" />
+  </a>
+</p>
 
 <a id="overview"></a>
 ## 🌌 System Overview

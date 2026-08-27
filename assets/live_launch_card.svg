@@ -1,0 +1,42 @@
+<svg width="100%" height="60" viewBox="0 0 800 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="launchBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1322" />
+      <stop offset="50%" stop-color="#070a12" />
+      <stop offset="100%" stop-color="#140f24" />
+    </linearGradient>
+    <linearGradient id="launchBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="50%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#00ff66" />
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0077b6" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .l-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 800; fill: #00f0ff; letter-spacing: 0.5px; }
+    .l-url { font-family: 'Fira Code', monospace; font-size: 13px; font-weight: 700; fill: #ffffff; }
+    .l-btn-txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 800; fill: #000000; letter-spacing: 0.5px; text-anchor: middle; }
+  </style>
+
+  <!-- Container -->
+  <rect x="2" y="2" width="796" height="56" rx="28" fill="url(#launchBg)" stroke="url(#launchBorder)" stroke-width="1.8" />
+
+  <!-- Live Pulse Beacon -->
+  <circle cx="28" cy="30" r="5" fill="#00ff66" />
+  <circle cx="28" cy="30" r="8" stroke="#00ff66" stroke-width="1" stroke-opacity="0.5" />
+
+  <!-- URL & Title Info -->
+  <text x="48" y="35" class="l-url">
+    <tspan fill="#00f0ff">https://</tspan>nivedreddy6.github.io/cyberbash-os/
+  </text>
+
+  <!-- Launch Action Pill on Right -->
+  <g transform="translate(615, 12)">
+    <rect width="165" height="36" rx="18" fill="url(#btnGrad)" />
+    <text x="82" y="23" class="l-btn-txt">ENTER SIMULATION ❯</text>
+  </g>
+</svg>
