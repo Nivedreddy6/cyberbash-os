@@ -1,0 +1,51 @@
+<svg width="100%" height="110" viewBox="0 0 1100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ftrBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121526" />
+      <stop offset="100%" stop-color="#0a0c14" />
+    </linearGradient>
+    <linearGradient id="ftrBrd" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="50%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#00ff66" />
+    </linearGradient>
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#ff007f" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .f-author { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 800; letter-spacing: 0.5px; }
+    .f-sub { font-family: 'Fira Code', monospace; font-size: 11px; fill: #8a99ad; }
+    .f-badge-txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 700; text-anchor: middle; }
+  </style>
+
+  <!-- Container -->
+  <rect x="2" y="4" width="1096" height="102" rx="20" fill="url(#ftrBg)" stroke="url(#ftrBrd)" stroke-width="1.5" />
+
+  <!-- Avatar Icon / Badge -->
+  <g transform="translate(30, 25)">
+    <rect width="60" height="60" rx="30" fill="#07090e" stroke="url(#nameGrad)" stroke-width="2" />
+    <text x="30" y="38" font-size="26" text-anchor="middle">⚡</text>
+  </g>
+
+  <!-- Author Info -->
+  <g transform="translate(110, 36)">
+    <text x="0" y="16" fill="url(#nameGrad)" class="f-author">ENGINEERED WITH PASSION BY NIVEDREDDY6</text>
+    <text x="0" y="38" class="f-sub">CyberBash OS v2.5 // Retro-Futuristic Web Linux Simulator</text>
+  </g>
+
+  <!-- Badges on Right -->
+  <g transform="translate(730, 38)">
+    <!-- GitHub Badge -->
+    <rect x="0" y="0" width="160" height="34" rx="17" fill="#07090e" stroke="#00f0ff" stroke-width="1.5" />
+    <rect x="3" y="3" width="154" height="28" rx="14" fill="#00f0ff" fill-opacity="0.12" />
+    <text x="80" y="21" fill="#00f0ff" class="f-badge-txt">★ GITHUB PROFILE</text>
+
+    <!-- License Badge -->
+    <rect x="180" y="0" width="160" height="34" rx="17" fill="#07090e" stroke="#00ff66" stroke-width="1.5" />
+    <rect x="183" y="3" width="154" height="28" rx="14" fill="#00ff66" fill-opacity="0.12" />
+    <text x="260" y="21" fill="#00ff66" class="f-badge-txt">📜 MIT LICENSED</text>
+  </g>
+</svg>

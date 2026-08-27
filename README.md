@@ -193,9 +193,8 @@ node server.js
 # http://localhost:3000
 ```
 
----
-
 <p align="center">
-  <img src="https://img.shields.io/badge/⚡_Engineered_by-Nivedreddy6-00f0ff?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/MIT_License-Open_Source-00ff66?style=for-the-badge" />
+  <a href="https://github.com/Nivedreddy6" target="_blank" rel="noopener noreferrer">
+    <img src="assets/author_footer.svg" alt="Engineered by Nivedreddy6" width="100%" />
+  </a>
 </p>
