@@ -4,28 +4,47 @@
   </a>
 </p>
 
+<br/>
+
 <p align="center">
   <a href="#top">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=1000&color=00F0FF&background=0A0C1400&center=true&vCenter=true&multiline=true&width=800&height=90&lines=%E2%9A%A1+CYBERBASH+OS+%3A%3A+RETRO-FUTURISTIC+WEB+LINUX+DESKTOP;%F0%9F%9B%A1%EF%B8%8F+10-LEVEL+HACKER+QUEST+ENGINE+%2B+AUTHENTIC+BASH+SHELL;%F0%9F%8E%A8+6+NEON+THEMES+%7C+SYNTHETIC+AUDIO+%7C+GRAPHICAL+FILE+MANAGER" alt="CyberBash Typing Banner" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=3000&pause=1200&color=00F0FF&background=0A0C1400&center=true&vCenter=true&width=900&height=50&lines=%E2%9A%A1+CYBERBASH+OS+%3A%3A+RETRO-FUTURISTIC+WEB+LINUX+DESKTOP;%F0%9F%9B%A1%EF%B8%8F+10-LEVEL+HACKER+QUEST+ENGINE+%2B+AUTHENTIC+BASH+SHELL;%F0%9F%8E%A8+6+NEON+THEMES+%7C+SYNTHETIC+AUDIO+%7C+NAUTILUS+GUI" alt="CyberBash Typing Banner" />
   </a>
 </p>
 
+<br/>
+
 <p align="center">
   <img src="https://img.shields.io/badge/⚡_OS-CyberBash_Linux_v2.5-00f0ff?style=for-the-badge&logo=linux&logoColor=000" alt="Linux OS" />
+  &nbsp;
   <img src="https://img.shields.io/badge/🔮_Engine-Vanilla_ES6_%2B_VFS-ff007f?style=for-the-badge&logo=javascript&logoColor=fff" alt="Engine" />
+  &nbsp;
   <img src="https://img.shields.io/badge/🔊_Audio-Web_Audio_Synth-00ff66?style=for-the-badge&logo=audiomack&logoColor=000" alt="Audio" />
+</p>
+<p align="center">
   <img src="https://img.shields.io/badge/🎮_Missions-10_Levels_Active-fcee0a?style=for-the-badge&logo=target&logoColor=000" alt="Missions" />
+  &nbsp;
   <img src="https://img.shields.io/badge/🛡️_Security-Root_Escalation-9d4edd?style=for-the-badge&logo=hack-the-box&logoColor=fff" alt="Security" />
+  &nbsp;
   <img src="https://img.shields.io/badge/📜_License-MIT-3b82f6?style=for-the-badge&logo=open-source-initiative&logoColor=fff" alt="License" />
 </p>
 
+<br/>
+
 <p align="center">
   <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer"><img src="assets/btn_demo.svg" alt="Live Demo" height="34" /></a>
+  &nbsp;
   <a href="#overview"><img src="assets/btn_overview.svg" alt="Overview" height="34" /></a>
+  &nbsp;
   <a href="#features"><img src="assets/btn_features.svg" alt="Features" height="34" /></a>
+  &nbsp;
   <a href="#quests"><img src="assets/btn_quests.svg" alt="Quests" height="34" /></a>
+</p>
+<p align="center">
   <a href="#commands"><img src="assets/btn_commands.svg" alt="Commands" height="34" /></a>
+  &nbsp;
   <a href="#architecture"><img src="assets/btn_architecture.svg" alt="Architecture" height="34" /></a>
+  &nbsp;
   <a href="#shortcuts"><img src="assets/btn_shortcuts.svg" alt="Shortcuts" height="34" /></a>
 </p>
 
