@@ -1,0 +1,158 @@
+<svg width="100%" height="520" viewBox="0 0 1100 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cmdCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121526" />
+      <stop offset="100%" stop-color="#0a0c14" />
+    </linearGradient>
+    <linearGradient id="cyanBrd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0077b6" />
+    </linearGradient>
+    <linearGradient id="pinkBrd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#7209b7" />
+    </linearGradient>
+    <linearGradient id="yellowBrd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcee0a" />
+      <stop offset="100%" stop-color="#f77f00" />
+    </linearGradient>
+    <linearGradient id="greenBrd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff66" />
+      <stop offset="100%" stop-color="#058c42" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-hdr { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 800; letter-spacing: 0.5px; }
+    .cmd-name { font-family: 'Fira Code', monospace; font-size: 12px; font-weight: 700; }
+    .cmd-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; fill: #94a3b8; }
+  </style>
+
+  <!-- COLUMN 1: Filesystem & Navigation -->
+  <g transform="translate(10, 10)">
+    <rect width="530" height="240" rx="12" fill="url(#cmdCardBg)" stroke="url(#cyanBrd)" stroke-width="1.5" />
+    <text x="20" y="32" fill="#00f0ff" class="cat-hdr">📂 NAVIGATION &amp; VIRTUAL FILESYSTEM</text>
+    
+    <g transform="translate(18, 48)">
+      <rect x="0" y="0" width="105" height="24" rx="5" fill="#07090e" stroke="#00f0ff" stroke-width="1" />
+      <text x="8" y="16" fill="#00f0ff" class="cmd-name">ls -la</text>
+      <text x="120" y="17" class="cmd-desc">List all files, permissions, and hidden dotfiles</text>
+
+      <rect x="0" y="30" width="105" height="24" rx="5" fill="#07090e" stroke="#00f0ff" stroke-width="1" />
+      <text x="8" y="46" fill="#00f0ff" class="cmd-name">cd &lt;dir&gt;</text>
+      <text x="120" y="47" class="cmd-desc">Traverse directories (cd .., cd ~, cd /var/log)</text>
+
+      <rect x="0" y="60" width="105" height="24" rx="5" fill="#07090e" stroke="#00f0ff" stroke-width="1" />
+      <text x="8" y="76" fill="#00f0ff" class="cmd-name">mkdir -p</text>
+      <text x="120" y="77" class="cmd-desc">Create nested folder hierarchies recursively</text>
+
+      <rect x="0" y="90" width="105" height="24" rx="5" fill="#07090e" stroke="#00f0ff" stroke-width="1" />
+      <text x="8" y="106" fill="#00f0ff" class="cmd-name">tree</text>
+      <text x="120" y="107" class="cmd-desc">Render visual ASCII directory branches</text>
+
+      <rect x="0" y="120" width="105" height="24" rx="5" fill="#07090e" stroke="#00f0ff" stroke-width="1" />
+      <text x="8" y="136" fill="#00f0ff" class="cmd-name">chmod</text>
+      <text x="120" y="137" class="cmd-desc">Update octal file permissions (e.g. chmod 700)</text>
+
+      <rect x="0" y="150" width="105" height="24" rx="5" fill="#07090e" stroke="#00f0ff" stroke-width="1" />
+      <text x="8" y="166" fill="#00f0ff" class="cmd-name">rm -r / touch</text>
+      <text x="120" y="167" class="cmd-desc">Create files or recursively delete directories</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: Text Streams & Pipelines -->
+  <g transform="translate(560, 10)">
+    <rect width="530" height="240" rx="12" fill="url(#cmdCardBg)" stroke="url(#pinkBrd)" stroke-width="1.5" />
+    <text x="20" y="32" fill="#ff007f" class="cat-hdr">📝 TEXT PROCESSING &amp; STREAM PIPELINES</text>
+    
+    <g transform="translate(18, 48)">
+      <rect x="0" y="0" width="105" height="24" rx="5" fill="#07090e" stroke="#ff007f" stroke-width="1" />
+      <text x="8" y="16" fill="#ff007f" class="cmd-name">cat &lt;file&gt;</text>
+      <text x="120" y="17" class="cmd-desc">Display stream contents or concatenate files</text>
+
+      <rect x="0" y="30" width="105" height="24" rx="5" fill="#07090e" stroke="#ff007f" stroke-width="1" />
+      <text x="8" y="46" fill="#ff007f" class="cmd-name">grep &lt;pat&gt;</text>
+      <text x="120" y="47" class="cmd-desc">Filter stream with regex (e.g. grep CRITICAL)</text>
+
+      <rect x="0" y="60" width="105" height="24" rx="5" fill="#07090e" stroke="#ff007f" stroke-width="1" />
+      <text x="8" y="76" fill="#ff007f" class="cmd-name">wc -l</text>
+      <text x="120" y="77" class="cmd-desc">Count lines, words, or character bytes in stream</text>
+
+      <rect x="0" y="90" width="105" height="24" rx="5" fill="#07090e" stroke="#ff007f" stroke-width="1" />
+      <text x="8" y="106" fill="#ff007f" class="cmd-name">nano &lt;file&gt;</text>
+      <text x="120" y="107" class="cmd-desc">Full-screen terminal text editor (Ctrl+O, Ctrl+X)</text>
+
+      <rect x="0" y="120" width="105" height="24" rx="5" fill="#07090e" stroke="#ff007f" stroke-width="1" />
+      <text x="8" y="136" fill="#ff007f" class="cmd-name">echo &gt; / &gt;&gt;</text>
+      <text x="120" y="137" class="cmd-desc">Write or append standard output stream to file</text>
+
+      <rect x="0" y="150" width="105" height="24" rx="5" fill="#07090e" stroke="#ff007f" stroke-width="1" />
+      <text x="8" y="166" fill="#ff007f" class="cmd-name">pipe |</text>
+      <text x="120" y="167" class="cmd-desc">Chain commands (e.g. cat syslog | grep err | wc)</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: Process Management -->
+  <g transform="translate(10, 270)">
+    <rect width="530" height="240" rx="12" fill="url(#cmdCardBg)" stroke="url(#yellowBrd)" stroke-width="1.5" />
+    <text x="20" y="32" fill="#fcee0a" class="cat-hdr">⚙️ PROCESS MANAGEMENT &amp; ROOT SECURITY</text>
+    
+    <g transform="translate(18, 48)">
+      <rect x="0" y="0" width="105" height="24" rx="5" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+      <text x="8" y="16" fill="#fcee0a" class="cmd-name">ps aux</text>
+      <text x="120" y="17" class="cmd-desc">Real-time table of active PIDs, CPU &amp; RAM usage</text>
+
+      <rect x="0" y="30" width="105" height="24" rx="5" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+      <text x="8" y="46" fill="#fcee0a" class="cmd-name">kill -9 &lt;PID&gt;</text>
+      <text x="120" y="47" class="cmd-desc">Send SIGKILL signal to neutralize rogue processes</text>
+
+      <rect x="0" y="60" width="105" height="24" rx="5" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+      <text x="8" y="76" fill="#fcee0a" class="cmd-name">sudo su</text>
+      <text x="120" y="77" class="cmd-desc">Elevate user session to root administrator mode</text>
+
+      <rect x="0" y="90" width="105" height="24" rx="5" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+      <text x="8" y="106" fill="#fcee0a" class="cmd-name">uptime / date</text>
+      <text x="120" y="107" class="cmd-desc">Inspect kernel system clock and boot duration</text>
+
+      <rect x="0" y="120" width="105" height="24" rx="5" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+      <text x="8" y="136" fill="#fcee0a" class="cmd-name">clear</text>
+      <text x="120" y="137" class="cmd-desc">Reset and wipe active terminal display buffer</text>
+
+      <rect x="0" y="150" width="105" height="24" rx="5" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+      <text x="8" y="166" fill="#fcee0a" class="cmd-name">whoami</text>
+      <text x="120" y="167" class="cmd-desc">Display active authenticated user identity</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 4: Visual Effects & Easter Eggs -->
+  <g transform="translate(560, 270)">
+    <rect width="530" height="240" rx="12" fill="url(#cmdCardBg)" stroke="url(#greenBrd)" stroke-width="1.5" />
+    <text x="20" y="32" fill="#00ff66" class="cat-hdr">🎮 VISUAL EFFECTS &amp; EASTER EGGS</text>
+    
+    <g transform="translate(18, 48)">
+      <rect x="0" y="0" width="105" height="24" rx="5" fill="#07090e" stroke="#00ff66" stroke-width="1" />
+      <text x="8" y="16" fill="#00ff66" class="cmd-name">neofetch</text>
+      <text x="120" y="17" class="cmd-desc">Cyberpunk ASCII system hardware specifications</text>
+
+      <rect x="0" y="30" width="105" height="24" rx="5" fill="#07090e" stroke="#00ff66" stroke-width="1" />
+      <text x="8" y="46" fill="#00ff66" class="cmd-name">matrix</text>
+      <text x="120" y="47" class="cmd-desc">Toggle Matrix canvas phosphor green digital rain</text>
+
+      <rect x="0" y="60" width="105" height="24" rx="5" fill="#07090e" stroke="#00ff66" stroke-width="1" />
+      <text x="8" y="76" fill="#00ff66" class="cmd-name">cowsay &lt;msg&gt;</text>
+      <text x="120" y="77" class="cmd-desc">Talking cyber ASCII cow with custom dialogues</text>
+
+      <rect x="0" y="90" width="105" height="24" rx="5" fill="#07090e" stroke="#00ff66" stroke-width="1" />
+      <text x="8" y="106" fill="#00ff66" class="cmd-name">sl</text>
+      <text x="120" y="107" class="cmd-desc">Steam Locomotive ASCII train animation across screen</text>
+
+      <rect x="0" y="120" width="105" height="24" rx="5" fill="#07090e" stroke="#00ff66" stroke-width="1" />
+      <text x="8" y="136" fill="#00ff66" class="cmd-name">theme</text>
+      <text x="120" y="137" class="cmd-desc">Cycle between 6 retro cyber aesthetic themes</text>
+
+      <rect x="0" y="150" width="105" height="24" rx="5" fill="#07090e" stroke="#00ff66" stroke-width="1" />
+      <text x="8" y="166" fill="#00ff66" class="cmd-name">sound</text>
+      <text x="120" y="167" class="cmd-desc">Toggle Web Audio synthetic keyclick feedback</text>
+    </g>
+  </g>
+</svg>

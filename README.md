@@ -81,48 +81,11 @@
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
-## 📖 Full Command Lab Reference
-
-```bash
-# ==============================================================================
-# 📂 NAVIGATION & VIRTUAL FILE SYSTEM
-# ==============================================================================
-ls -la           # List all files including hidden dotfiles with permissions & sizes
-cd <directory>   # Navigate directories (cd .., cd ~, cd /var/log, cd projects)
-pwd              # Print working directory absolute path
-mkdir -p <dir>   # Create nested folder hierarchies recursively
-touch <file>     # Instantiate empty file or refresh timestamp
-rm -r <target>   # Remove file or recursively delete directories
-tree             # Render visual ASCII directory hierarchy
-chmod <mode>     # Update octal permissions (e.g., chmod 755 script.py, chmod 700 .bashrc)
-
-# ==============================================================================
-# 📝 TEXT PROCESSING & STREAM PIPELINES
-# ==============================================================================
-cat <file>       # Display file stream content or concatenate files
-grep <pattern>   # Regex pattern matching (e.g., grep -i "critical" /var/log/syslog)
-wc -l <file>     # Count lines, words, or character bytes in stream
-nano <file>      # Interactive full-screen terminal text editor (Ctrl+O, Ctrl+X)
-echo "text" > f  # Overwrite file with text stream
-echo "text" >> f # Append text stream to file
-
-# ==============================================================================
-# ⚙️ PROCESS MANAGEMENT & SYSTEM UTILITIES
-# ==============================================================================
-ps aux           # Display real-time active system daemons, PIDs, and CPU/RAM usage
-kill -9 <PID>    # Terminate process by Process ID
-sudo su          # Elevate session privileges to root administrative mode
-date / uptime    # Inspect system clock and uptime duration
-clear / Ctrl+L   # Clear terminal screen buffer
-
-# ==============================================================================
-# 🎮 EASTER EGGS & VISUAL EFFECTS
-# ==============================================================================
-neofetch         # Display cyberpunk ASCII logo and system hardware specs
-matrix           # Toggle Matrix canvas digital green phosphor rain
-cowsay <msg>     # Configurable talking cyber ASCII cow
-sl               # Steam Locomotive ASCII train animation
-```
+<p align="center">
+  <a href="#top">
+    <img src="assets/command_lab.svg" alt="CyberBash Full Command Lab Reference" width="100%" />
+  </a>
+</p>
 
 <p align="center">
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
