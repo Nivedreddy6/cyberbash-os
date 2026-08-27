@@ -199,8 +199,31 @@ node server.js
 
 <br/>
 
-<p align="center">
-  <a href="https://github.com/Nivedreddy6" target="_blank" rel="noopener noreferrer">
-    <img src="assets/dev_id_card.svg" alt="Nived Reddy - CyberBash Creator" width="85%" />
-  </a>
-</p>
+<div align="center">
+
+<a href="https://github.com/Nivedreddy6" target="_blank" rel="noopener noreferrer">
+  <img src="https://github.com/Nivedreddy6.png" width="90" height="90" style="border-radius: 50%;" alt="Nived Reddy" />
+</a>
+
+### ⚡ **[Nived Reddy](https://github.com/Nivedreddy6)**
+`Lead Architect & Creator • CyberBash OS`
+
+<br/>
+
+<a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer">
+  <img src="assets/btn_demo.svg" alt="Live Demo" height="34" />
+</a>
+&nbsp;&nbsp;
+<a href="https://github.com/Nivedreddy6" target="_blank" rel="noopener noreferrer">
+  <img src="assets/btn_overview.svg" alt="GitHub Profile" height="34" />
+</a>
+&nbsp;&nbsp;
+<a href="LICENSE" target="_blank" rel="noopener noreferrer">
+  <img src="assets/btn_features.svg" alt="MIT License" height="34" />
+</a>
+
+<br/><br/>
+
+<sub>Engineered with ⚡ by <strong>Nivedreddy6</strong> &bull; Released under the <strong>MIT License</strong></sub>
+
+</div>
