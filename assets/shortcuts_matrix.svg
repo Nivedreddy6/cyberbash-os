@@ -1,0 +1,68 @@
+<svg width="100%" height="260" viewBox="0 0 1100 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="scBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121526" />
+      <stop offset="100%" stop-color="#0a0c14" />
+    </linearGradient>
+    <linearGradient id="scHdr" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .sc-hdr { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 800; fill: #00f0ff; letter-spacing: 0.5px; }
+    .sc-key { font-family: 'Fira Code', monospace; font-size: 12px; font-weight: 700; fill: #fcee0a; text-anchor: middle; }
+    .sc-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 600; fill: #ffffff; }
+    .sc-win { font-family: 'Fira Code', monospace; font-size: 11px; font-weight: 700; fill: #0a0c14; text-anchor: middle; }
+  </style>
+
+  <!-- Container -->
+  <rect width="1100" height="260" rx="14" fill="url(#scBg)" stroke="#2a3158" stroke-width="1.5" />
+
+  <!-- Header -->
+  <rect x="2" y="2" width="1096" height="42" rx="12" fill="url(#scHdr)" />
+  <text x="100" y="26" class="sc-hdr" text-anchor="middle">KEY COMBO</text>
+  <text x="320" y="26" class="sc-hdr">ACTION DESCRIPTION</text>
+  <text x="960" y="26" class="sc-hdr" text-anchor="middle">TARGET ENVIRONMENT</text>
+
+  <!-- Row 1 -->
+  <g transform="translate(0, 48)">
+    <rect x="10" y="4" width="1080" height="42" rx="8" fill="#161b2e" />
+    <rect x="30" y="10" width="140" height="30" rx="6" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+    <text x="100" y="30" class="sc-key">Tab</text>
+    <text x="320" y="30" class="sc-desc">Smart Autocompletion (Commands &amp; VFS Directory Paths)</text>
+    <rect x="910" y="10" width="100" height="30" rx="15" fill="#00f0ff" />
+    <text x="960" y="29" class="sc-win">Terminal</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(0, 96)">
+    <rect x="10" y="4" width="1080" height="42" rx="8" fill="#131728" />
+    <rect x="30" y="10" width="140" height="30" rx="6" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+    <text x="100" y="30" class="sc-key">Ctrl + L</text>
+    <text x="320" y="30" class="sc-desc">Clear Screen Buffer (Reset active terminal display)</text>
+    <rect x="910" y="10" width="100" height="30" rx="15" fill="#00f0ff" />
+    <text x="960" y="29" class="sc-win">Terminal</text>
+  </g>
+
+  <!-- Row 3 -->
+  <g transform="translate(0, 144)">
+    <rect x="10" y="4" width="1080" height="42" rx="8" fill="#161b2e" />
+    <rect x="30" y="10" width="140" height="30" rx="6" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+    <text x="100" y="30" class="sc-key">Ctrl + O</text>
+    <text x="320" y="30" class="sc-desc">Save / WriteOut Buffer (Save current file to VFS storage)</text>
+    <rect x="910" y="10" width="100" height="30" rx="15" fill="#ff007f" />
+    <text x="960" y="29" class="sc-win" fill="#ffffff">Nano Editor</text>
+  </g>
+
+  <!-- Row 4 -->
+  <g transform="translate(0, 192)">
+    <rect x="10" y="4" width="1080" height="42" rx="8" fill="#131728" />
+    <rect x="30" y="10" width="140" height="30" rx="6" fill="#07090e" stroke="#fcee0a" stroke-width="1" />
+    <text x="100" y="30" class="sc-key">Double Click</text>
+    <text x="320" y="30" class="sc-desc">Maximize / Restore Window &amp; Top Elevation</text>
+    <rect x="910" y="10" width="100" height="30" rx="15" fill="#00ff66" />
+    <text x="960" y="29" class="sc-win">Titlebar</text>
+  </g>
+</svg>

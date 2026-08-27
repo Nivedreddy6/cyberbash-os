@@ -1,0 +1,167 @@
+<svg width="100%" height="680" viewBox="0 0 1100 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tblBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121526" />
+      <stop offset="100%" stop-color="#0a0c14" />
+    </linearGradient>
+    <linearGradient id="hdrBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1f2640" />
+      <stop offset="50%" stop-color="#2a1b3d" />
+      <stop offset="100%" stop-color="#162c33" />
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcee0a" />
+      <stop offset="100%" stop-color="#ff9100" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .th-txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 800; fill: #00f0ff; letter-spacing: 0.5px; }
+    .td-lvl { font-family: 'Fira Code', monospace; font-size: 12px; font-weight: 700; text-anchor: middle; }
+    .td-name { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 700; fill: #ffffff; }
+    .td-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; fill: #94a3b8; }
+    .td-cmd { font-family: 'Fira Code', monospace; font-size: 12px; fill: #00f0ff; }
+    .td-xp { font-family: 'Fira Code', monospace; font-size: 12px; font-weight: 800; fill: #0a0c14; text-anchor: middle; }
+  </style>
+
+  <!-- Table Wrapper Container -->
+  <rect width="1100" height="680" rx="14" fill="url(#tblBg)" stroke="#2a3158" stroke-width="1.5" />
+
+  <!-- Table Header -->
+  <rect x="2" y="2" width="1096" height="48" rx="12" fill="url(#hdrBg)" />
+  <text x="35" y="30" class="th-txt" text-anchor="middle">LVL</text>
+  <text x="120" y="30" class="th-txt">MISSION CODENAME</text>
+  <text x="350" y="30" class="th-txt">TARGET OBJECTIVE</text>
+  <text x="730" y="30" class="th-txt">COMMAND SYNTAX</text>
+  <text x="1010" y="30" class="th-txt" text-anchor="middle">XP REWARD</text>
+
+  <!-- Row 1 (L1) -->
+  <g transform="translate(0, 52)">
+    <rect x="10" y="4" width="1080" height="54" rx="8" fill="#161b2e" />
+    <rect x="20" y="16" width="32" height="28" rx="6" fill="#00f0ff" fill-opacity="0.15" stroke="#00f0ff" stroke-width="1" />
+    <text x="36" y="35" fill="#00f0ff" class="td-lvl">01</text>
+    <text x="120" y="36" class="td-name">Reconnaissance</text>
+    <text x="350" y="36" class="td-desc">Inspect coordinates &amp; reveal hidden dotfiles</text>
+    <rect x="710" y="14" width="200" height="32" rx="6" fill="#07090e" stroke="#1e293b" />
+    <text x="725" y="35" class="td-cmd">pwd &amp;&amp; ls -la</text>
+    <rect x="960" y="14" width="100" height="32" rx="16" fill="#00f0ff" />
+    <text x="1010" y="35" class="td-xp">+100 XP</text>
+  </g>
+
+  <!-- Row 2 (L2) -->
+  <g transform="translate(0, 112)">
+    <rect x="10" y="4" width="1080" height="54" rx="8" fill="#131728" />
+    <rect x="20" y="16" width="32" height="28" rx="6" fill="#c084fc" fill-opacity="0.15" stroke="#c084fc" stroke-width="1" />
+    <text x="36" y="35" fill="#c084fc" class="td-lvl">02</text>
+    <text x="120" y="36" class="td-name">Deciphering Briefs</text>
+    <text x="350" y="36" class="td-desc">Extract encrypted brief from .mission_brief.txt</text>
+    <rect x="710" y="14" width="200" height="32" rx="6" fill="#07090e" stroke="#1e293b" />
+    <text x="725" y="35" class="td-cmd">cat .mission_brief.txt</text>
+    <rect x="960" y="14" width="100" height="32" rx="16" fill="#c084fc" />
+    <text x="1010" y="35" class="td-xp">+150 XP</text>
+  </g>
+
+  <!-- Row 3 (L3) -->
+  <g transform="translate(0, 172)">
+    <rect x="10" y="4" width="1080" height="54" rx="8" fill="#161b2e" />
+    <rect x="20" y="16" width="32" height="28" rx="6" fill="#f43f5e" fill-opacity="0.15" stroke="#f43f5e" stroke-width="1" />
+    <text x="36" y="35" fill="#f43f5e" class="td-lvl">03</text>
+    <text x="120" y="36" class="td-name">Forensic Log Audit</text>
+    <text x="350" y="36" class="td-desc">Search kernel audit trail for [CRITICAL] tags</text>
+    <rect x="710" y="14" width="225" height="32" rx="6" fill="#07090e" stroke="#1e293b" />
+    <text x="720" y="35" class="td-cmd">grep CRITICAL syslog</text>
+    <rect x="960" y="14" width="100" height="32" rx="16" fill="#f43f5e" />
+    <text x="1010" y="35" class="td-xp">+200 XP</text>
+  </g>
+
+  <!-- Row 4 (L4) -->
+  <g transform="translate(0, 232)">
+    <rect x="10" y="4" width="1080" height="54" rx="8" fill="#131728" />
+    <rect x="20" y="16" width="32" height="28" rx="6" fill="#fb923c" fill-opacity="0.15" stroke="#fb923c" stroke-width="1" />
+    <text x="36" y="35" fill="#fb923c" class="td-lvl">04</text>
+    <text x="120" y="36" class="td-name">Neutralize Daemon</text>
+    <text x="350" y="36" class="td-desc">Terminate rogue cryptominer consuming 99% CPU</text>
+    <rect x="710" y="14" width="200" height="32" rx="6" fill="#07090e" stroke="#1e293b" />
+    <text x="725" y="35" class="td-cmd">kill -9 7392</text>
+    <rect x="960" y="14" width="100" height="32" rx="16" fill="#fb923c" />
+    <text x="1010" y="35" class="td-xp">+250 XP</text>
+  </g>
+
+  <!-- Row 5 (L5) -->
+  <g transform="translate(0, 292)">
+    <rect x="10" y="4" width="1080" height="54" rx="8" fill="#161b2e" />
+    <rect x="20" y="16" width="32" height="28" rx="6" fill="#facc15" fill-opacity="0.15" stroke="#facc15" stroke-width="1" />
+    <text x="36" y="35" fill="#facc15" class="td-lvl">05</text>
+    <text x="120" y="36" class="td-name">Security Patching</text>
+    <text x="350" y="36" class="td-desc">Craft emergency security patch via nano editor</text>
+    <rect x="710" y="14" width="225" height="32" rx="6" fill="#07090e" stroke="#1e293b" />
+    <text x="720" y="35" class="td-cmd">nano notes/patch.txt</text>
+    <rect x="960" y="14" width="100" height="32" rx="16" fill="#facc15" />
+    <text x="1010" y="35" class="td-xp">+300 XP</text>
+  </g>
+
+  <!-- Row 6 (L6) -->
+  <g transform="translate(0, 352)">
+    <rect x="10" y="4" width="1080" height="54" rx="8" fill="#131728" />
+    <rect x="20" y="16" width="32" height="28" rx="6" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1" />
+    <text x="36" y="35" fill="#38bdf8" class="td-lvl">06</text>
+    <text x="120" y="36" class="td-name">Directory Architect</text>
+    <text x="350" y="36" class="td-desc">Build nested backup tree hierarchies</text>
+    <rect x="710" y="14" width="225" height="32" rx="6" fill="#07090e" stroke="#1e293b" />
+    <text x="720" y="35" class="td-cmd">mkdir -p &amp;&amp; tree</text>
+    <rect x="960" y="14" width="100" height="32" rx="16" fill="#38bdf8" />
+    <text x="1010" y="35" class="td-xp">+350 XP</text>
+  </g>
+
+  <!-- Row 7 (L7) -->
+  <g transform="translate(0, 412)">
+    <rect x="10" y="4" width="1080" height="54" rx="8" fill="#161b2e" />
+    <rect x="20" y="16" width="32" height="28" rx="6" fill="#e879f9" fill-opacity="0.15" stroke="#e879f9" stroke-width="1" />
+    <text x="36" y="35" fill="#e879f9" class="td-lvl">07</text>
+    <text x="120" y="36" class="td-name">Permission Shield</text>
+    <text x="350" y="36" class="td-desc">Lock down configuration profile to chmod 700</text>
+    <rect x="710" y="14" width="200" height="32" rx="6" fill="#07090e" stroke="#1e293b" />
+    <text x="725" y="35" class="td-cmd">chmod 700 .bashrc</text>
+    <rect x="960" y="14" width="100" height="32" rx="16" fill="#e879f9" />
+    <text x="1010" y="35" class="td-xp">+400 XP</text>
+  </g>
+
+  <!-- Row 8 (L8) -->
+  <g transform="translate(0, 472)">
+    <rect x="10" y="4" width="1080" height="54" rx="8" fill="#131728" />
+    <rect x="20" y="16" width="32" height="28" rx="6" fill="#34d399" fill-opacity="0.15" stroke="#34d399" stroke-width="1" />
+    <text x="36" y="35" fill="#34d399" class="td-lvl">08</text>
+    <text x="120" y="36" class="td-name">Pipeline Stream</text>
+    <text x="350" y="36" class="td-desc">Stream manipulation &amp; system account counting</text>
+    <rect x="710" y="14" width="225" height="32" rx="6" fill="#07090e" stroke="#1e293b" />
+    <text x="720" y="35" class="td-cmd">cat /etc/passwd | wc</text>
+    <rect x="960" y="14" width="100" height="32" rx="16" fill="#34d399" />
+    <text x="1010" y="35" class="td-xp">+450 XP</text>
+  </g>
+
+  <!-- Row 9 (L9) -->
+  <g transform="translate(0, 532)">
+    <rect x="10" y="4" width="1080" height="54" rx="8" fill="#161b2e" />
+    <rect x="20" y="16" width="32" height="28" rx="6" fill="#ff007f" fill-opacity="0.15" stroke="#ff007f" stroke-width="1" />
+    <text x="36" y="35" fill="#ff007f" class="td-lvl">09</text>
+    <text x="120" y="36" class="td-name">Root Escalation</text>
+    <text x="350" y="36" class="td-desc">Elevate terminal session permissions to root admin</text>
+    <rect x="710" y="14" width="200" height="32" rx="6" fill="#07090e" stroke="#1e293b" />
+    <text x="725" y="35" class="td-cmd">sudo su</text>
+    <rect x="960" y="14" width="100" height="32" rx="16" fill="#ff007f" />
+    <text x="1010" y="35" class="td-xp">+500 XP</text>
+  </g>
+
+  <!-- Row 10 (L10) -->
+  <g transform="translate(0, 592)">
+    <rect x="10" y="4" width="1080" height="64" rx="8" fill="#1a1e36" stroke="#fcee0a" stroke-width="1.5" />
+    <rect x="20" y="18" width="32" height="34" rx="6" fill="#fcee0a" fill-opacity="0.2" stroke="#fcee0a" stroke-width="1.5" />
+    <text x="36" y="40" fill="#fcee0a" class="td-lvl" font-size="14">10</text>
+    <text x="120" y="41" class="td-name" fill="#fcee0a" font-size="14">👑 Matrix Awakening</text>
+    <text x="350" y="41" class="td-desc" fill="#e2e8f0">Benchmark cyber node specs &amp; enter digital rain</text>
+    <rect x="710" y="18" width="225" height="34" rx="6" fill="#07090e" stroke="#fcee0a" />
+    <text x="720" y="40" class="td-cmd" fill="#fcee0a">neofetch &amp;&amp; matrix</text>
+    <rect x="955" y="16" width="115" height="38" rx="19" fill="url(#goldGlow)" />
+    <text x="1012" y="40" class="td-xp" font-size="13">+1000 XP</text>
+  </g>
+</svg>

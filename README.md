@@ -69,29 +69,13 @@
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
-## 🎯 10-Level Hacker Quest Roadmap
+## 🎯 10-Level Hacker Quest Manifest
 
 <p align="center">
   <a href="#top">
-    <img src="assets/quest_cards.svg" alt="Hacker Quests Roadmap" width="100%" />
+    <img src="assets/mission_manifest.svg" alt="Operation Linux Guardian Mission Manifest" width="100%" />
   </a>
 </p>
-
-> [!NOTE]
-> ### 🛡️ Operation: Linux Guardian — Mission Manifest
-
-| Level | Badge | Mission Codename | Target Objective | Command Syntax | XP Reward |
-| :---: | :---: | :--- | :--- | :--- | :---: |
-| `01` | 🟢 | **Reconnaissance** | Inspect current coordinates & reveal hidden dotfiles | `pwd && ls -la` | **`+100 XP`** |
-| `02` | 🟣 | **Deciphering Briefs** | Extract encrypted intelligence brief from `.mission_brief.txt` | `cat .mission_brief.txt` | **`+150 XP`** |
-| `03` | 🔴 | **Forensic Log Audit** | Search kernel audit trail for `[CRITICAL]` breach flags | `grep CRITICAL /var/log/syslog` | **`+200 XP`** |
-| `04` | 🟠 | **Neutralize Daemon** | Terminate rogue cryptominer consuming 99% CPU | `kill 7392` | **`+250 XP`** |
-| `05` | 🟡 | **Security Patching** | Craft emergency security patch using `nano` editor | `nano notes/security_patch.txt` | **`+300 XP`** |
-| `06` | 🔵 | **Directory Architect**| Build nested backup hierarchies & diagram tree | `mkdir -p backups/logs && tree` | **`+350 XP`** |
-| `07` | 🟣 | **Permission Shield** | Harden permissions on configuration profile to `700` | `chmod 700 .bashrc` | **`+400 XP`** |
-| `08` | 🟢 | **Pipeline Stream** | Master stream manipulation to count system accounts | `cat /etc/passwd \| wc -l` | **`+450 XP`** |
-| `09` | 🔴 | **Root Escalation** | Elevate session permissions to root administrative mode | `sudo su` | **`+500 XP`** |
-| `10` | 👑 | **Matrix Awakening** | Benchmark cyber node hardware & enter digital rain | `neofetch && matrix` | **`+1000 XP`** |
 
 <p align="center">
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
@@ -190,15 +174,11 @@ graph TD
 
 ## ⌨️ Desktop Keyboard Shortcuts
 
-| Key Combo | Action Description | Target Window |
-| :--- | :--- | :---: |
-| <kbd>Tab</kbd> | **Smart Autocompletion** (Commands & VFS Directory Paths) | `Terminal` |
-| <kbd>↑</kbd> / <kbd>↓</kbd> | **Command History Navigation** (Cycle previous commands) | `Terminal` |
-| <kbd>Ctrl</kbd> + <kbd>L</kbd> | **Clear Screen Buffer** (Reset terminal display) | `Terminal` |
-| <kbd>Ctrl</kbd> + <kbd>C</kbd> | **Interrupt / SIGINT** (Cancel active command) | `Terminal` |
-| <kbd>Ctrl</kbd> + <kbd>O</kbd> | **WriteOut / Save File** | `Nano Editor` |
-| <kbd>Ctrl</kbd> + <kbd>X</kbd> | **Exit Editor** | `Nano Editor` |
-| <kbd>Double Click</kbd> | **Maximize / Restore Window** | `Titlebar` |
+<p align="center">
+  <a href="#top">
+    <img src="assets/shortcuts_matrix.svg" alt="CyberBash Shortcuts Matrix" width="100%" />
+  </a>
+</p>
 
 <p align="center">
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
