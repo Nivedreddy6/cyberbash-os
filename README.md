@@ -81,6 +81,8 @@
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
+## 📖 Full Command Lab Reference
+
 <p align="center">
   <a href="#top">
     <img src="assets/command_lab.svg" alt="CyberBash Full Command Lab Reference" width="100%" />
