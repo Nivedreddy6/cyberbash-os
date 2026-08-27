@@ -21,11 +21,12 @@
 
 <p align="center">
   <a href="https://nivedreddy6.github.io/cyberbash-os/" target="_blank" rel="noopener noreferrer"><img src="assets/btn_demo.svg" alt="Live Demo" height="34" /></a>
-  <a href="#-system-overview"><img src="assets/btn_overview.svg" alt="Overview" height="34" /></a>
-  <a href="#-core-feature-matrix"><img src="assets/btn_features.svg" alt="Features" height="34" /></a>
-  <a href="#-10-level-hacker-quest-manifest"><img src="assets/btn_quests.svg" alt="Quests" height="34" /></a>
-  <a href="#-full-command-lab-reference"><img src="assets/btn_commands.svg" alt="Commands" height="34" /></a>
-  <a href="#-desktop-keyboard-shortcuts"><img src="assets/btn_shortcuts.svg" alt="Shortcuts" height="34" /></a>
+  <a href="#overview"><img src="assets/btn_overview.svg" alt="Overview" height="34" /></a>
+  <a href="#features"><img src="assets/btn_features.svg" alt="Features" height="34" /></a>
+  <a href="#quests"><img src="assets/btn_quests.svg" alt="Quests" height="34" /></a>
+  <a href="#commands"><img src="assets/btn_commands.svg" alt="Commands" height="34" /></a>
+  <a href="#architecture"><img src="assets/btn_architecture.svg" alt="Architecture" height="34" /></a>
+  <a href="#shortcuts"><img src="assets/btn_shortcuts.svg" alt="Shortcuts" height="34" /></a>
 </p>
 
 <p align="center">
@@ -39,6 +40,7 @@
 
 ---
 
+<a id="overview"></a>
 ## 🌌 System Overview
 
 > [!IMPORTANT]
@@ -48,6 +50,7 @@
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
+<a id="features"></a>
 ## ⚡ Core Feature Matrix
 
 <p align="center">
@@ -60,6 +63,7 @@
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
+<a id="themes"></a>
 ## 🎨 6 Neon Aesthetic Themes
 
 <p align="center">
@@ -72,6 +76,7 @@
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
+<a id="quests"></a>
 ## 🎯 10-Level Hacker Quest Manifest
 
 <p align="center">
@@ -84,6 +89,7 @@
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
+<a id="commands"></a>
 ## 📖 Full Command Lab Reference
 
 <p align="center">
@@ -96,6 +102,7 @@
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
+<a id="architecture"></a>
 ## 🏗️ Architecture & Data Flow
 
 ```mermaid
@@ -140,6 +147,7 @@ graph TD
   <a href="#top"><img src="assets/neon_divider.svg" width="100%" /></a>
 </p>
 
+<a id="shortcuts"></a>
 ## ⌨️ Desktop Keyboard Shortcuts
 
 <p align="center">
